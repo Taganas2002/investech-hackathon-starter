@@ -1,0 +1,3 @@
+ticker,company_name,sector,revenue_growth,gross_margin,ebitda_margin,roe,debt_to_equity,same_store_sales_growth
+KEEP,Keepwell Retail,Specialty Retail,10,35,12,15,0.4,2
+GHOST,Ghost Goods,Specialty Retail,N/A,not-a-number,,,abc,
