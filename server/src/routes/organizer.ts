@@ -1,96 +1,87 @@
-import { Router } from "express"
-import { fetchOrganizer, isProxyConfigured, publicError } from "../services/organizerClient.js"
-import { getOnesheetCompanies, getOnesheetPrices, usesOnesheet } from "../services/onesheet.js"
+import { Router } from "express";
+import { fetchOrganizer } from "../services/organizerClient.js";
+import { getOnesheetCompanies, getOnesheetPrices, usesOnesheet } from "../services/onesheet.js";
 
 /**
- * TONIGHT: change UPSTREAM paths to match the organizer documentation.
- * These are appended to ORGANIZER_API_URL.
- *
- * Example:
- *   ORGANIZER_API_URL=https://api.example.com/v1
- *   companies: "/equities"
- *   requests https://api.example.com/v1/equities
- *
- * The React app keeps calling /api/companies. Only this file needs the real upstream path.
+ * UPDATE THESE PATHS TONIGHT when the organizer publishes real endpoints.
+ * The React app calls this proxy; this proxy calls the organizer.
+ * Response JSON is returned unchanged. Field mapping stays in
+ * client/src/dataAdapter.ts.
  */
-const UPSTREAM = {
+export const ORGANIZER_PATHS = {
   companies: "/companies",
   company: (ticker: string) => `/companies/${encodeURIComponent(ticker)}`,
   sector: (sector: string) => `/sectors/${encodeURIComponent(sector)}`,
   prices: (ticker: string) => `/prices/${encodeURIComponent(ticker)}`,
-}
+};
 
-export const organizerRouter = Router()
+export const organizerRouter = Router();
 
-organizerRouter.get("/companies", async (_req, res) => {
-  if (usesOnesheet()) {
-    await sendOnesheet(res, async () => ({ companies: await getOnesheetCompanies() }))
-    return
-  }
-  await sendUpstream(res, UPSTREAM.companies)
-})
+organizerRouter.get("/health", (_req, res) => {
+  res.json({
+    ok: true,
+    organizerConfigured: Boolean(process.env.ORGANIZER_API_URL?.trim()),
+  });
+});
 
-organizerRouter.get("/companies/:ticker", async (req, res) => {
-  const ticker = routeParam(req.params.ticker)
-  if (usesOnesheet()) {
-    await sendOnesheet(res, async () => {
-      const companies = (await getOnesheetCompanies()).filter((company) => company.ticker.toUpperCase() === ticker.toUpperCase())
-      return { companies }
-    })
-    return
-  }
-  await sendUpstream(res, UPSTREAM.company(ticker))
-})
-
-organizerRouter.get("/sectors/:sector", async (req, res) => {
-  const sector = routeParam(req.params.sector)
-  if (usesOnesheet()) {
-    await sendOnesheet(res, async () => {
-      const companies = (await getOnesheetCompanies()).filter((company) => company.sector.toLowerCase() === sector.toLowerCase())
-      return { companies }
-    })
-    return
-  }
-  await sendUpstream(res, UPSTREAM.sector(sector))
-})
-
-organizerRouter.get("/prices/:ticker", async (req, res) => {
-  const ticker = routeParam(req.params.ticker)
-  if (usesOnesheet()) {
-    await sendOnesheet(res, async () => ({ prices: await getOnesheetPrices(ticker) }))
-    return
-  }
-  await sendUpstream(res, UPSTREAM.prices(ticker))
-})
-
-async function sendOnesheet(
-  res: { status: (code: number) => { json: (body: unknown) => void }; json: (body: unknown) => void },
-  load: () => Promise<unknown>,
-) {
+organizerRouter.get("/companies", async (_req, res, next) => {
   try {
-    res.json(await load())
+    if (usesOnesheet()) {
+      res.json({ companies: await getOnesheetCompanies() });
+      return;
+    }
+    res.json(await fetchOrganizer(ORGANIZER_PATHS.companies));
   } catch (error) {
-    res.status(502).json({ error: publicError(error) })
+    next(error);
   }
-}
+});
 
-async function sendUpstream(res: { status: (code: number) => { json: (body: unknown) => void }; json: (body: unknown) => void }, path: string) {
-  if (!isProxyConfigured()) {
-    res.status(503).json({
-      error:
-        "ORGANIZER_API_URL is not set. Use Demo Data in the app, or copy server/.env.example to server/.env.",
-    })
-    return
-  }
+organizerRouter.get("/companies/:ticker", async (req, res, next) => {
   try {
-    const data = await fetchOrganizer(path)
-    res.json(data)
+    const ticker = routeParam(req.params.ticker);
+    if (usesOnesheet()) {
+      const companies = (await getOnesheetCompanies()).filter(
+        (company) => company.ticker.toUpperCase() === ticker.toUpperCase(),
+      );
+      res.json({ companies });
+      return;
+    }
+    res.json(await fetchOrganizer(ORGANIZER_PATHS.company(ticker)));
   } catch (error) {
-    res.status(502).json({ error: publicError(error) })
+    next(error);
   }
-}
+});
+
+organizerRouter.get("/sectors/:sector", async (req, res, next) => {
+  try {
+    const sector = routeParam(req.params.sector);
+    if (usesOnesheet()) {
+      const companies = (await getOnesheetCompanies()).filter(
+        (company) => company.sector.toLowerCase() === sector.toLowerCase(),
+      );
+      res.json({ companies });
+      return;
+    }
+    res.json(await fetchOrganizer(ORGANIZER_PATHS.sector(sector)));
+  } catch (error) {
+    next(error);
+  }
+});
+
+organizerRouter.get("/prices/:ticker", async (req, res, next) => {
+  try {
+    const ticker = routeParam(req.params.ticker);
+    if (usesOnesheet()) {
+      res.json({ prices: await getOnesheetPrices(ticker) });
+      return;
+    }
+    res.json(await fetchOrganizer(ORGANIZER_PATHS.prices(ticker)));
+  } catch (error) {
+    next(error);
+  }
+});
 
 function routeParam(value: string | string[] | undefined): string {
-  if (Array.isArray(value)) return value[0] ?? ""
-  return value ?? ""
+  if (Array.isArray(value)) return value[0] ?? "";
+  return value ?? "";
 }

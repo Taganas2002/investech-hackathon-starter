@@ -1,0 +1,6 @@
+ticker,company_name,sector,revenue_growth,gross_margin,ebitda_margin,roe,debt_to_equity,same_store_sales_growth,current_price,price_change_30d,price_change_1y,source
+NOVA,Nova Retail,Specialty Retail,18.4,42.1,15.2,21.3,0.62,5.8,44.02,6.4,22.1,Company filing (sample CSV)
+RIVR,River & Co.,Specialty Retail,4.1,36.8,11.4,12.6,0.22,1.1,31.40,-1.5,4.2,Company filing (sample CSV)
+PEAK,Peak Outfitters,Specialty Retail,11.2,48.5,18.9,17.4,0.35,3.2,67.15,4.1,15.6,Company filing (sample CSV)
+URBN,Urban Thread,Specialty Retail,9.5,40.2,13.1,15.1,0.48,2.4,22.80,2.2,8.7,Company filing (sample CSV)
+MART,Mart & Main,Specialty Retail,2.4,31.0,,8.2,1.45,-0.6,15.05,-4.2,-6.4,Company filing (sample CSV)

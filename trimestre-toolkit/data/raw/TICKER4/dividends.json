@@ -1,0 +1,13 @@
+{
+  "success": true,
+  "data": {
+    "symbol": "TICKER4",
+    "dividends": [],
+    "latest": null
+  },
+  "meta": {
+    "timestamp": "2026-11-12T22:12:03.896Z",
+    "cached": false,
+    "source": "market"
+  }
+}

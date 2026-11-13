@@ -1,0 +1,32 @@
+{
+  "success": true,
+  "data": {
+    "symbol": "DHR",
+    "name": "Danaher Corporation",
+    "price": 232.17,
+    "change": -3.14,
+    "changesPercentage": -1.33441,
+    "dayLow": 231.9,
+    "dayHigh": 235.655,
+    "yearHigh": 242.8,
+    "yearLow": 160.93,
+    "marketCap": 163338746997,
+    "priceAvg50": 221.6242,
+    "priceAvg200": 200.893,
+    "volume": 2359589,
+    "avgVolume": null,
+    "exchange": "NYSE",
+    "open": 235.42,
+    "previousClose": 235.31,
+    "eps": null,
+    "pe": null,
+    "earningsAnnouncement": null,
+    "sharesOutstanding": null,
+    "timestamp": 1794517199
+  },
+  "meta": {
+    "timestamp": "2026-11-12T22:46:33.827Z",
+    "cached": true,
+    "source": "market"
+  }
+}

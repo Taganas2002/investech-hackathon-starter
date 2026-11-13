@@ -1,0 +1,32 @@
+{
+  "success": true,
+  "data": {
+    "symbol": "TFII",
+    "name": "TFI International Inc.",
+    "price": 96.09,
+    "change": -0.8,
+    "changesPercentage": -0.82568,
+    "dayLow": 95.38,
+    "dayHigh": 97.455,
+    "yearHigh": 167.69,
+    "yearLow": 80.63,
+    "marketCap": 7897925370,
+    "priceAvg50": 116.1242,
+    "priceAvg200": 128.9774,
+    "volume": 242984,
+    "avgVolume": null,
+    "exchange": "NYSE",
+    "open": 96.59,
+    "previousClose": 96.89,
+    "eps": null,
+    "pe": null,
+    "earningsAnnouncement": null,
+    "sharesOutstanding": null,
+    "timestamp": 1794517202
+  },
+  "meta": {
+    "timestamp": "2026-11-12T22:17:08.683Z",
+    "cached": false,
+    "source": "market"
+  }
+}

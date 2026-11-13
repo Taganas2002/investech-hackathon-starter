@@ -1,0 +1,32 @@
+{
+  "success": true,
+  "data": {
+    "symbol": "TOI",
+    "name": "The Oncology Institute, Inc.",
+    "price": 5.13,
+    "change": -1.26,
+    "changesPercentage": -19.71831,
+    "dayLow": 4.87,
+    "dayHigh": 5.15,
+    "yearHigh": 7.05,
+    "yearLow": 2.32,
+    "marketCap": 512912446,
+    "priceAvg50": 5.2798,
+    "priceAvg200": 3.8611,
+    "volume": 1212244,
+    "avgVolume": null,
+    "exchange": "NASDAQ",
+    "open": 4.935,
+    "previousClose": 6.39,
+    "eps": null,
+    "pe": null,
+    "earningsAnnouncement": null,
+    "sharesOutstanding": null,
+    "timestamp": 1785787200
+  },
+  "meta": {
+    "timestamp": "2026-11-12T22:17:07.118Z",
+    "cached": false,
+    "source": "market"
+  }
+}

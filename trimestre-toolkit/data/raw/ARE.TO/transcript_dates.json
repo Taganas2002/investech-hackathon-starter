@@ -1,0 +1,245 @@
+{
+  "success": true,
+  "data": [
+    {
+      "symbol": "ARE.TO",
+      "year": 2026,
+      "quarter": 3,
+      "date": "2026-10-30"
+    },
+    {
+      "symbol": "ARE.TO",
+      "year": 2026,
+      "quarter": 2,
+      "date": "2026-07-31"
+    },
+    {
+      "symbol": "ARE.TO",
+      "year": 2025,
+      "quarter": 4,
+      "date": "2026-03-06"
+    },
+    {
+      "symbol": "ARE.TO",
+      "year": 2025,
+      "quarter": 3,
+      "date": "2025-10-30"
+    },
+    {
+      "symbol": "ARE.TO",
+      "year": 2025,
+      "quarter": 2,
+      "date": "2025-08-01"
+    },
+    {
+      "symbol": "ARE.TO",
+      "year": 2025,
+      "quarter": 1,
+      "date": "2025-04-24"
+    },
+    {
+      "symbol": "ARE.TO",
+      "year": 2024,
+      "quarter": 4,
+      "date": "2025-03-06"
+    },
+    {
+      "symbol": "ARE.TO",
+      "year": 2024,
+      "quarter": 3,
+      "date": "2024-11-01"
+    },
+    {
+      "symbol": "ARE.TO",
+      "year": 2024,
+      "quarter": 2,
+      "date": "2024-07-25"
+    },
+    {
+      "symbol": "ARE.TO",
+      "year": 2024,
+      "quarter": 1,
+      "date": "2024-04-25"
+    },
+    {
+      "symbol": "ARE.TO",
+      "year": 2023,
+      "quarter": 4,
+      "date": "2024-03-06"
+    },
+    {
+      "symbol": "ARE.TO",
+      "year": 2023,
+      "quarter": 3,
+      "date": "2023-10-26"
+    },
+    {
+      "symbol": "ARE.TO",
+      "year": 2023,
+      "quarter": 2,
+      "date": "2023-07-30"
+    },
+    {
+      "symbol": "ARE.TO",
+      "year": 2023,
+      "quarter": 1,
+      "date": "2023-04-26"
+    },
+    {
+      "symbol": "ARE.TO",
+      "year": 2022,
+      "quarter": 4,
+      "date": "2023-03-01"
+    },
+    {
+      "symbol": "ARE.TO",
+      "year": 2022,
+      "quarter": 3,
+      "date": "2022-10-30"
+    },
+    {
+      "symbol": "ARE.TO",
+      "year": 2022,
+      "quarter": 2,
+      "date": "2022-07-29"
+    },
+    {
+      "symbol": "ARE.TO",
+      "year": 2022,
+      "quarter": 1,
+      "date": "2022-04-30"
+    },
+    {
+      "symbol": "ARE.TO",
+      "year": 2021,
+      "quarter": 4,
+      "date": "2022-03-02"
+    },
+    {
+      "symbol": "ARE.TO",
+      "year": 2021,
+      "quarter": 3,
+      "date": "2021-10-29"
+    },
+    {
+      "symbol": "ARE.TO",
+      "year": 2021,
+      "quarter": 2,
+      "date": "2021-07-23"
+    },
+    {
+      "symbol": "ARE.TO",
+      "year": 2021,
+      "quarter": 1,
+      "date": "2021-04-23"
+    },
+    {
+      "symbol": "ARE.TO",
+      "year": 2020,
+      "quarter": 4,
+      "date": "2021-02-26"
+    },
+    {
+      "symbol": "ARE.TO",
+      "year": 2020,
+      "quarter": 3,
+      "date": "2020-11-01"
+    },
+    {
+      "symbol": "ARE.TO",
+      "year": 2020,
+      "quarter": 2,
+      "date": "2020-07-24"
+    },
+    {
+      "symbol": "ARE.TO",
+      "year": 2020,
+      "quarter": 1,
+      "date": "2020-04-24"
+    },
+    {
+      "symbol": "ARE.TO",
+      "year": 2019,
+      "quarter": 4,
+      "date": "2020-03-04"
+    },
+    {
+      "symbol": "ARE.TO",
+      "year": 2019,
+      "quarter": 3,
+      "date": "2019-11-01"
+    },
+    {
+      "symbol": "ARE.TO",
+      "year": 2019,
+      "quarter": 2,
+      "date": "2019-07-26"
+    },
+    {
+      "symbol": "ARE.TO",
+      "year": 2019,
+      "quarter": 1,
+      "date": "2019-04-26"
+    },
+    {
+      "symbol": "ARE.TO",
+      "year": 2018,
+      "quarter": 4,
+      "date": "2019-03-06"
+    },
+    {
+      "symbol": "ARE.TO",
+      "year": 2018,
+      "quarter": 2,
+      "date": "2018-07-27"
+    },
+    {
+      "symbol": "ARE.TO",
+      "year": 2017,
+      "quarter": 2,
+      "date": "2017-07-28"
+    },
+    {
+      "symbol": "ARE.TO",
+      "year": 2016,
+      "quarter": 3,
+      "date": "2016-11-02"
+    },
+    {
+      "symbol": "ARE.TO",
+      "year": 2016,
+      "quarter": 2,
+      "date": "2016-08-04"
+    },
+    {
+      "symbol": "ARE.TO",
+      "year": 2015,
+      "quarter": 4,
+      "date": "2016-03-02"
+    },
+    {
+      "symbol": "ARE.TO",
+      "year": 2015,
+      "quarter": 3,
+      "date": "2015-11-12"
+    },
+    {
+      "symbol": "ARE.TO",
+      "year": 2014,
+      "quarter": 4,
+      "date": "2015-03-05"
+    },
+    {
+      "symbol": "ARE.TO",
+      "year": 2010,
+      "quarter": 1,
+      "date": "2010-05-05"
+    }
+  ],
+  "meta": {
+    "timestamp": "2026-11-12T22:18:58.361Z",
+    "cached": false,
+    "source": "market",
+    "total": 39
+  }
+}

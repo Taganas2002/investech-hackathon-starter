@@ -1,0 +1,32 @@
+{
+  "success": true,
+  "data": {
+    "symbol": "TDY",
+    "name": "Teledyne Technologies Incorporated",
+    "price": 647.57,
+    "change": -3.55,
+    "changesPercentage": -0.54521,
+    "dayLow": 641.71,
+    "dayHigh": 652.395,
+    "yearHigh": 697.67,
+    "yearLow": 483.02,
+    "marketCap": 30018543165,
+    "priceAvg50": 620.4534,
+    "priceAvg200": 635.30225,
+    "volume": 275237,
+    "avgVolume": null,
+    "exchange": "NYSE",
+    "open": 645.56,
+    "previousClose": 651.12,
+    "eps": null,
+    "pe": null,
+    "earningsAnnouncement": null,
+    "sharesOutstanding": null,
+    "timestamp": 1794517202
+  },
+  "meta": {
+    "timestamp": "2026-11-12T22:46:30.400Z",
+    "cached": true,
+    "source": "market"
+  }
+}

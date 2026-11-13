@@ -1,0 +1,32 @@
+{
+  "success": true,
+  "data": {
+    "symbol": "ETN",
+    "name": "Eaton Corporation plc",
+    "price": 359.04,
+    "change": -1.58,
+    "changesPercentage": -0.43813,
+    "dayLow": 349.57,
+    "dayHigh": 363.64,
+    "yearHigh": 478,
+    "yearLow": 311.92,
+    "marketCap": 139487031742,
+    "priceAvg50": 402.8484,
+    "priceAvg200": 397.74554,
+    "volume": 2693847,
+    "avgVolume": null,
+    "exchange": "NYSE",
+    "open": 351,
+    "previousClose": 360.62,
+    "eps": null,
+    "pe": null,
+    "earningsAnnouncement": null,
+    "sharesOutstanding": null,
+    "timestamp": 1794517202
+  },
+  "meta": {
+    "timestamp": "2026-11-12T22:46:29.523Z",
+    "cached": true,
+    "source": "market"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "success": true,
+  "data": {
+    "symbol": "HEI",
+    "name": "HEICO Corporation",
+    "price": 339.51,
+    "change": -9.84,
+    "changesPercentage": -2.81666,
+    "dayLow": 339.06,
+    "dayHigh": 348.415,
+    "yearHigh": 376.86,
+    "yearLow": 256.11,
+    "marketCap": 47300421162,
+    "priceAvg50": 311.753,
+    "priceAvg200": 318.90146,
+    "volume": 391639,
+    "avgVolume": null,
+    "exchange": "NYSE",
+    "open": 346,
+    "previousClose": 349.35,
+    "eps": null,
+    "pe": null,
+    "earningsAnnouncement": null,
+    "sharesOutstanding": null,
+    "timestamp": 1794517202
+  },
+  "meta": {
+    "timestamp": "2026-11-12T22:46:31.557Z",
+    "cached": true,
+    "source": "market"
+  }
+}

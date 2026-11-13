@@ -1,0 +1,269 @@
+{
+  "success": true,
+  "data": [
+    {
+      "symbol": "WSP.TO",
+      "year": 2026,
+      "quarter": 3,
+      "date": "2026-11-05"
+    },
+    {
+      "symbol": "WSP.TO",
+      "year": 2026,
+      "quarter": 2,
+      "date": "2026-08-06"
+    },
+    {
+      "symbol": "WSP.TO",
+      "year": 2025,
+      "quarter": 4,
+      "date": "2026-02-26"
+    },
+    {
+      "symbol": "WSP.TO",
+      "year": 2025,
+      "quarter": 3,
+      "date": "2025-11-06"
+    },
+    {
+      "symbol": "WSP.TO",
+      "year": 2025,
+      "quarter": 2,
+      "date": "2025-08-07"
+    },
+    {
+      "symbol": "WSP.TO",
+      "year": 2025,
+      "quarter": 1,
+      "date": "2025-05-08"
+    },
+    {
+      "symbol": "WSP.TO",
+      "year": 2024,
+      "quarter": 4,
+      "date": "2025-02-27"
+    },
+    {
+      "symbol": "WSP.TO",
+      "year": 2024,
+      "quarter": 3,
+      "date": "2024-11-07"
+    },
+    {
+      "symbol": "WSP.TO",
+      "year": 2024,
+      "quarter": 2,
+      "date": "2024-07-31"
+    },
+    {
+      "symbol": "WSP.TO",
+      "year": 2024,
+      "quarter": 1,
+      "date": "2024-05-11"
+    },
+    {
+      "symbol": "WSP.TO",
+      "year": 2023,
+      "quarter": 4,
+      "date": "2024-02-29"
+    },
+    {
+      "symbol": "WSP.TO",
+      "year": 2023,
+      "quarter": 3,
+      "date": "2023-11-09"
+    },
+    {
+      "symbol": "WSP.TO",
+      "year": 2023,
+      "quarter": 2,
+      "date": "2023-08-09"
+    },
+    {
+      "symbol": "WSP.TO",
+      "year": 2023,
+      "quarter": 1,
+      "date": "2023-05-14"
+    },
+    {
+      "symbol": "WSP.TO",
+      "year": 2022,
+      "quarter": 4,
+      "date": "2023-03-09"
+    },
+    {
+      "symbol": "WSP.TO",
+      "year": 2022,
+      "quarter": 3,
+      "date": "2022-11-11"
+    },
+    {
+      "symbol": "WSP.TO",
+      "year": 2022,
+      "quarter": 2,
+      "date": "2022-08-13"
+    },
+    {
+      "symbol": "WSP.TO",
+      "year": 2022,
+      "quarter": 1,
+      "date": "2022-05-12"
+    },
+    {
+      "symbol": "WSP.TO",
+      "year": 2021,
+      "quarter": 4,
+      "date": "2022-03-10"
+    },
+    {
+      "symbol": "WSP.TO",
+      "year": 2021,
+      "quarter": 3,
+      "date": "2021-11-10"
+    },
+    {
+      "symbol": "WSP.TO",
+      "year": 2021,
+      "quarter": 2,
+      "date": "2021-08-11"
+    },
+    {
+      "symbol": "WSP.TO",
+      "year": 2021,
+      "quarter": 1,
+      "date": "2021-05-14"
+    },
+    {
+      "symbol": "WSP.TO",
+      "year": 2020,
+      "quarter": 4,
+      "date": "2021-02-27"
+    },
+    {
+      "symbol": "WSP.TO",
+      "year": 2020,
+      "quarter": 3,
+      "date": "2020-11-07"
+    },
+    {
+      "symbol": "WSP.TO",
+      "year": 2020,
+      "quarter": 2,
+      "date": "2020-08-09"
+    },
+    {
+      "symbol": "WSP.TO",
+      "year": 2020,
+      "quarter": 1,
+      "date": "2020-05-10"
+    },
+    {
+      "symbol": "WSP.TO",
+      "year": 2019,
+      "quarter": 4,
+      "date": "2020-02-29"
+    },
+    {
+      "symbol": "WSP.TO",
+      "year": 2019,
+      "quarter": 3,
+      "date": "2019-11-10"
+    },
+    {
+      "symbol": "WSP.TO",
+      "year": 2019,
+      "quarter": 2,
+      "date": "2019-08-09"
+    },
+    {
+      "symbol": "WSP.TO",
+      "year": 2019,
+      "quarter": 1,
+      "date": "2019-05-15"
+    },
+    {
+      "symbol": "WSP.TO",
+      "year": 2018,
+      "quarter": 4,
+      "date": "2019-03-14"
+    },
+    {
+      "symbol": "WSP.TO",
+      "year": 2018,
+      "quarter": 2,
+      "date": "2018-08-11"
+    },
+    {
+      "symbol": "WSP.TO",
+      "year": 2018,
+      "quarter": 1,
+      "date": "2018-05-10"
+    },
+    {
+      "symbol": "WSP.TO",
+      "year": 2017,
+      "quarter": 4,
+      "date": "2018-03-15"
+    },
+    {
+      "symbol": "WSP.TO",
+      "year": 2017,
+      "quarter": 3,
+      "date": "2017-11-09"
+    },
+    {
+      "symbol": "WSP.TO",
+      "year": 2017,
+      "quarter": 2,
+      "date": "2017-08-09"
+    },
+    {
+      "symbol": "WSP.TO",
+      "year": 2017,
+      "quarter": 1,
+      "date": "2017-05-10"
+    },
+    {
+      "symbol": "WSP.TO",
+      "year": 2016,
+      "quarter": 4,
+      "date": "2017-03-01"
+    },
+    {
+      "symbol": "WSP.TO",
+      "year": 2016,
+      "quarter": 3,
+      "date": "2016-11-08"
+    },
+    {
+      "symbol": "WSP.TO",
+      "year": 2016,
+      "quarter": 2,
+      "date": "2016-08-03"
+    },
+    {
+      "symbol": "WSP.TO",
+      "year": 2016,
+      "quarter": 1,
+      "date": "2016-05-10"
+    },
+    {
+      "symbol": "WSP.TO",
+      "year": 2015,
+      "quarter": 4,
+      "date": "2016-03-15"
+    },
+    {
+      "symbol": "WSP.TO",
+      "year": 2015,
+      "quarter": 3,
+      "date": "2015-10-29"
+    }
+  ],
+  "meta": {
+    "timestamp": "2026-11-12T22:18:56.759Z",
+    "cached": false,
+    "source": "market",
+    "total": 43
+  }
+}

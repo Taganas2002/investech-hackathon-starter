@@ -558,3 +558,197 @@ button:focus-visible,
     text-align: left;
   }
 }
+
+.view-switch {
+  padding: 0.75rem 1.25rem 0;
+}
+
+.wsp-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.nav-link,
+.chip {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: transparent;
+  color: var(--text);
+  border-radius: 999px;
+  padding: 0.4rem 0.8rem;
+  cursor: pointer;
+}
+
+.nav-link.selected,
+.chip.selected {
+  background: rgba(94, 200, 192, 0.16);
+  border-color: rgba(94, 200, 192, 0.5);
+}
+
+.filter-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin: 0.75rem 0;
+}
+
+.offline-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.skeleton-panel {
+  min-height: 8rem;
+  display: grid;
+  place-items: center;
+  color: var(--muted);
+}
+
+.pillar-card.clickable {
+  text-align: left;
+  cursor: pointer;
+  width: 100%;
+  color: inherit;
+}
+
+.drawer,
+.entity-card {
+  margin-top: 0.75rem;
+  padding: 0.9rem;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.entity-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.6rem;
+}
+
+.event-list {
+  list-style: none;
+  padding: 0;
+  margin: 0.75rem 0 0;
+}
+
+.event-row {
+  width: 100%;
+  text-align: left;
+  background: transparent;
+  border: 0;
+  color: inherit;
+  padding: 0.55rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  cursor: pointer;
+}
+
+blockquote {
+  margin: 0.35rem 0 0.75rem;
+  color: var(--muted);
+  border-left: 2px solid rgba(94, 200, 192, 0.5);
+  padding-left: 0.7rem;
+}
+
+.wsp-shell {
+  gap: 1rem;
+}
+
+.verdict-panel h2 {
+  margin: 0.25rem 0 0.75rem;
+}
+
+.verdict-admit,
+.pillar-pass {
+  color: var(--good);
+}
+
+.verdict-reject,
+.pillar-fail {
+  color: #ff7b72;
+}
+
+.verdict-watch,
+.pillar-watch,
+.verdict-insufficient-data,
+.pillar-insufficient-data {
+  color: #f0b429;
+}
+
+.pillar-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.pillar-card,
+.chart-block,
+.nested {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+  padding: 0.9rem;
+}
+
+.pillar-card strong {
+  display: block;
+  font-size: 1.2rem;
+  margin: 0.35rem 0;
+}
+
+.wsp-panel h2 {
+  margin: 0.2rem 0 0.5rem;
+}
+
+.chart-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+
+.raise-list,
+.chip-columns ul {
+  margin: 0.5rem 0 0;
+  padding-left: 1.1rem;
+}
+
+.table-wrap {
+  overflow-x: auto;
+  margin-top: 0.75rem;
+}
+
+.table-wrap table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+}
+
+.table-wrap th,
+.table-wrap td {
+  text-align: left;
+  padding: 0.55rem 0.45rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  vertical-align: top;
+}
+
+.highlight-row {
+  background: rgba(94, 200, 192, 0.08);
+}
+
+.chip-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 0.75rem;
+}
+
+@media (max-width: 980px) {
+  .pillar-grid,
+  .chart-row,
+  .chip-columns {
+    grid-template-columns: 1fr;
+  }
+}

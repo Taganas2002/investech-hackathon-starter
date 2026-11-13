@@ -1,0 +1,4 @@
+symbol,name,industry,revGrowth,gm,ebitda_m,return_on_equity,de_ratio,sss_growth,px,chg_30d,chg_1y,citation
+ZEPH,Zephyr Outfitters,Specialty Retail,14.2,39.5,14.1,16.8,0.51,4.4,28.4,3.3,11.0,Alternate schema sample
+LARK,Lark Supply,Specialty Retail,6.1,44.0,16.2,13.4,0.28,1.9,19.7,0.8,5.5,Alternate schema sample
+,Missing Ticker,Specialty Retail,1,1,1,1,1,1,1,1,1,Should be skipped

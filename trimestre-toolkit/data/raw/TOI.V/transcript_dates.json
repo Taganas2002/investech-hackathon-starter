@@ -1,0 +1,17 @@
+{
+  "success": true,
+  "data": [
+    {
+      "symbol": "TOI.V",
+      "year": 2021,
+      "quarter": 1,
+      "date": "2021-05-05"
+    }
+  ],
+  "meta": {
+    "timestamp": "2026-11-12T22:18:54.275Z",
+    "cached": false,
+    "source": "market",
+    "total": 1
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "data": [],
+  "meta": {
+    "timestamp": "2026-11-12T22:11:46.976Z",
+    "source": "market",
+    "cached": false,
+    "page": 0,
+    "limit": 100,
+    "symbol": "TICKER2",
+    "sourceCurrency": "USD",
+    "displayCurrency": "USD",
+    "valuesConvertedFromReporting": false
+  }
+}

@@ -1,7 +1,9 @@
 import cors from "cors"
 import dotenv from "dotenv"
-import express from "express"
+import express, { type NextFunction, type Request, type Response } from "express"
 import { organizerRouter } from "./routes/organizer.js"
+import { wspRouter } from "./routes/wsp.js"
+import { toolkitReady } from "./services/toolkit.js"
 
 dotenv.config()
 
@@ -15,15 +17,24 @@ app.get("/api/health", (_req, res) => {
   res.json({
     ok: true,
     proxyConfigured: Boolean(process.env.ORGANIZER_API_URL?.trim()),
+    toolkitReady: toolkitReady(),
   })
 })
 
+app.use("/api/wsp", wspRouter)
 app.use("/api", organizerRouter)
 
-app.use("/api", (_req, res) => {
-  res.status(404).json({
-    error: "Unknown proxy route. See server/src/routes/organizer.ts.",
-  })
+app.use((error: unknown, _req: Request, res: Response, _next: NextFunction) => {
+  const status =
+    typeof error === "object" &&
+    error !== null &&
+    "status" in error &&
+    typeof (error as { status?: number }).status === "number"
+      ? (error as { status: number }).status
+      : 502
+
+  const message = error instanceof Error ? error.message : "Proxy request failed"
+  res.status(status).json({ error: message })
 })
 
 app.listen(port, () => {

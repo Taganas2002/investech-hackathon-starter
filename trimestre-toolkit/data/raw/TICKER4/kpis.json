@@ -1,0 +1,17 @@
+{
+  "success": true,
+  "data": {
+    "reportingCurrency": "USD",
+    "currency": "USD",
+    "metrics": [],
+    "segmentGroups": [],
+    "data": [],
+    "kpiChartPlan": [],
+    "bedrockInsights": null
+  },
+  "meta": {
+    "timestamp": "2026-11-12T22:12:02.454Z",
+    "cached": false,
+    "source": "Fiscal"
+  }
+}

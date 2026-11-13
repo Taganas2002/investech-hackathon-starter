@@ -1,0 +1,7 @@
+company,ticker,employees,as_of,source,note
+WSP Global,WSP.TO,74400,2025-12-31,"Onesheet deep profile metric 'employees' (filing quote: 'as at December 31, 2025, had approximately 74,400 employees globally')","Matches FY2025 revenue. Latest: ~85,500 at 2026-09-30 after TRC"
+AECOM,ACM,51000,,"Team research, 2026-11-12 (fill in exact source and date)",Approximate
+Jacobs,J,66000,,"Team research, 2026-11-12 (fill in exact source and date)",Approximate
+Stantec,STN.TO,21000,,"Team research, 2026-11-12 (fill in exact source and date)",Approximate; check: Stantec is often reported with a larger headcount
+Tetra Tech,TTEK,27000,,"Team research, 2026-11-12 (fill in exact source and date)",Approximate
+KBR,KBR,31000,,"Team research, 2026-11-12 (fill in exact source and date)",Approximate

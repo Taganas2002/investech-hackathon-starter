@@ -1,0 +1,275 @@
+symbol,endpoint,status,data_chars,error
+TICKER1,company_profile,fail,0,404 NOT_FOUND: Company profile with identifier 'TICKER1' not found (/company-profiles/TICKER1)
+TICKER1,kpis,ok,140,
+TICKER1,fundamentals,fail,0,500 EXTERNAL_API_ERROR: Failed to fetch company profile for TICKER1 (/stocks/fundamentals/TICKER1)
+TICKER1,profile,fail,0,500 EXTERNAL_API_ERROR: Failed to fetch company profile for TICKER1 (/stocks/fundamentals/TICKER1/profile)
+TICKER1,ratios,fail,0,500 EXTERNAL_API_ERROR: Failed to fetch financial ratios for TICKER1 (/financials/ratios/TICKER1)
+TICKER1,growth,ok,2,
+TICKER1,growth_metrics,fail,0,"400 VALIDATION_ERROR: Validation failed: metric: Invalid input: expected string, received undefined (/financials/growth/TICKER1/metrics)"
+TICKER1,quote,fail,0,404 NOT_FOUND: Stock quote with identifier 'TICKER1' not found (/stocks/quotes/TICKER1)
+TICKER1,marketcap_history,fail,0,404 NO_DATA: No historical data found for symbol: TICKER1 (/stocks/historical/TICKER1/marketcap)
+TICKER1,price_history,ok,2,
+TICKER1,estimates,ok,2,
+TICKER1,peers,ok,2,
+TICKER1,dividends,ok,54,
+TICKER1,transcript_dates,ok,2,
+TICKER1,news,ok,2,
+TICKER1,insider,ok,2,
+TICKER1,statement_income,fail,0,500 EXTERNAL_API_ERROR: Failed to fetch income statement for TICKER1 (/financials/statements/TICKER1/income)
+TICKER1,statement_balance,fail,0,500 EXTERNAL_API_ERROR: Failed to fetch balance sheet for TICKER1 (/financials/statements/TICKER1/balance)
+TICKER1,statement_cash,fail,0,500 EXTERNAL_API_ERROR: Failed to fetch cash flow statement for TICKER1 (/financials/statements/TICKER1/cash)
+TICKER2,company_profile,fail,0,404 NOT_FOUND: Company profile with identifier 'TICKER2' not found (/company-profiles/TICKER2)
+TICKER2,kpis,ok,140,
+TICKER2,fundamentals,fail,0,500 EXTERNAL_API_ERROR: Failed to fetch company profile for TICKER2 (/stocks/fundamentals/TICKER2)
+TICKER2,profile,fail,0,500 EXTERNAL_API_ERROR: Failed to fetch company profile for TICKER2 (/stocks/fundamentals/TICKER2/profile)
+TICKER2,ratios,fail,0,500 EXTERNAL_API_ERROR: Failed to fetch financial ratios for TICKER2 (/financials/ratios/TICKER2)
+TICKER2,growth,ok,2,
+TICKER2,growth_metrics,fail,0,"400 VALIDATION_ERROR: Validation failed: metric: Invalid input: expected string, received undefined (/financials/growth/TICKER2/metrics)"
+TICKER2,quote,fail,0,404 NOT_FOUND: Stock quote with identifier 'TICKER2' not found (/stocks/quotes/TICKER2)
+TICKER2,marketcap_history,fail,0,404 NO_DATA: No historical data found for symbol: TICKER2 (/stocks/historical/TICKER2/marketcap)
+TICKER2,price_history,ok,2,
+TICKER2,estimates,ok,2,
+TICKER2,peers,ok,2,
+TICKER2,dividends,ok,54,
+TICKER2,transcript_dates,ok,2,
+TICKER2,news,ok,2,
+TICKER2,insider,ok,2,
+TICKER2,statement_income,fail,0,500 EXTERNAL_API_ERROR: Failed to fetch income statement for TICKER2 (/financials/statements/TICKER2/income)
+TICKER2,statement_balance,fail,0,500 EXTERNAL_API_ERROR: Failed to fetch balance sheet for TICKER2 (/financials/statements/TICKER2/balance)
+TICKER2,statement_cash,fail,0,500 EXTERNAL_API_ERROR: Failed to fetch cash flow statement for TICKER2 (/financials/statements/TICKER2/cash)
+TICKER3,company_profile,fail,0,404 NOT_FOUND: Company profile with identifier 'TICKER3' not found (/company-profiles/TICKER3)
+TICKER3,kpis,ok,140,
+TICKER3,fundamentals,fail,0,500 EXTERNAL_API_ERROR: Failed to fetch company profile for TICKER3 (/stocks/fundamentals/TICKER3)
+TICKER3,profile,fail,0,500 EXTERNAL_API_ERROR: Failed to fetch company profile for TICKER3 (/stocks/fundamentals/TICKER3/profile)
+TICKER3,ratios,fail,0,500 EXTERNAL_API_ERROR: Failed to fetch financial ratios for TICKER3 (/financials/ratios/TICKER3)
+TICKER3,growth,ok,2,
+TICKER3,growth_metrics,fail,0,"400 VALIDATION_ERROR: Validation failed: metric: Invalid input: expected string, received undefined (/financials/growth/TICKER3/metrics)"
+TICKER3,quote,fail,0,404 NOT_FOUND: Stock quote with identifier 'TICKER3' not found (/stocks/quotes/TICKER3)
+TICKER3,marketcap_history,fail,0,404 NO_DATA: No historical data found for symbol: TICKER3 (/stocks/historical/TICKER3/marketcap)
+TICKER3,price_history,ok,2,
+TICKER3,estimates,ok,2,
+TICKER3,peers,ok,2,
+TICKER3,dividends,ok,54,
+TICKER3,transcript_dates,ok,2,
+TICKER3,news,ok,2,
+TICKER3,insider,ok,2,
+TICKER3,statement_income,fail,0,500 EXTERNAL_API_ERROR: Failed to fetch income statement for TICKER3 (/financials/statements/TICKER3/income)
+TICKER3,statement_balance,fail,0,500 EXTERNAL_API_ERROR: Failed to fetch balance sheet for TICKER3 (/financials/statements/TICKER3/balance)
+TICKER3,statement_cash,fail,0,500 EXTERNAL_API_ERROR: Failed to fetch cash flow statement for TICKER3 (/financials/statements/TICKER3/cash)
+TICKER4,company_profile,fail,0,404 NOT_FOUND: Company profile with identifier 'TICKER4' not found (/company-profiles/TICKER4)
+TICKER4,kpis,ok,140,
+TICKER4,fundamentals,fail,0,500 EXTERNAL_API_ERROR: Failed to fetch company profile for TICKER4 (/stocks/fundamentals/TICKER4)
+TICKER4,profile,fail,0,500 EXTERNAL_API_ERROR: Failed to fetch company profile for TICKER4 (/stocks/fundamentals/TICKER4/profile)
+TICKER4,ratios,fail,0,500 EXTERNAL_API_ERROR: Failed to fetch financial ratios for TICKER4 (/financials/ratios/TICKER4)
+TICKER4,growth,ok,2,
+TICKER4,growth_metrics,fail,0,"400 VALIDATION_ERROR: Validation failed: metric: Invalid input: expected string, received undefined (/financials/growth/TICKER4/metrics)"
+TICKER4,quote,fail,0,404 NOT_FOUND: Stock quote with identifier 'TICKER4' not found (/stocks/quotes/TICKER4)
+TICKER4,marketcap_history,fail,0,404 NO_DATA: No historical data found for symbol: TICKER4 (/stocks/historical/TICKER4/marketcap)
+TICKER4,price_history,ok,2,
+TICKER4,estimates,ok,2,
+TICKER4,peers,ok,2,
+TICKER4,dividends,ok,54,
+TICKER4,transcript_dates,ok,2,
+TICKER4,news,ok,2,
+TICKER4,insider,ok,2,
+TICKER4,statement_income,fail,0,500 EXTERNAL_API_ERROR: Failed to fetch income statement for TICKER4 (/financials/statements/TICKER4/income)
+TICKER4,statement_balance,fail,0,500 EXTERNAL_API_ERROR: Failed to fetch balance sheet for TICKER4 (/financials/statements/TICKER4/balance)
+TICKER4,statement_cash,fail,0,500 EXTERNAL_API_ERROR: Failed to fetch cash flow statement for TICKER4 (/financials/statements/TICKER4/cash)
+TICKER5,company_profile,fail,0,404 NOT_FOUND: Company profile with identifier 'TICKER5' not found (/company-profiles/TICKER5)
+TICKER5,kpis,ok,140,
+TICKER5,fundamentals,fail,0,500 EXTERNAL_API_ERROR: Failed to fetch company profile for TICKER5 (/stocks/fundamentals/TICKER5)
+TICKER5,profile,fail,0,500 EXTERNAL_API_ERROR: Failed to fetch company profile for TICKER5 (/stocks/fundamentals/TICKER5/profile)
+TICKER5,ratios,fail,0,500 EXTERNAL_API_ERROR: Failed to fetch financial ratios for TICKER5 (/financials/ratios/TICKER5)
+TICKER5,growth,ok,2,
+TICKER5,growth_metrics,fail,0,"400 VALIDATION_ERROR: Validation failed: metric: Invalid input: expected string, received undefined (/financials/growth/TICKER5/metrics)"
+TICKER5,quote,fail,0,404 NOT_FOUND: Stock quote with identifier 'TICKER5' not found (/stocks/quotes/TICKER5)
+TICKER5,marketcap_history,fail,0,404 NO_DATA: No historical data found for symbol: TICKER5 (/stocks/historical/TICKER5/marketcap)
+TICKER5,price_history,ok,2,
+TICKER5,estimates,ok,2,
+TICKER5,peers,ok,2,
+TICKER5,dividends,ok,54,
+TICKER5,transcript_dates,ok,2,
+TICKER5,news,ok,2,
+TICKER5,insider,ok,2,
+TICKER5,statement_income,fail,0,500 EXTERNAL_API_ERROR: Failed to fetch income statement for TICKER5 (/financials/statements/TICKER5/income)
+TICKER5,statement_balance,fail,0,500 EXTERNAL_API_ERROR: Failed to fetch balance sheet for TICKER5 (/financials/statements/TICKER5/balance)
+TICKER5,statement_cash,fail,0,500 EXTERNAL_API_ERROR: Failed to fetch cash flow statement for TICKER5 (/financials/statements/TICKER5/cash)
+csu,company_profile,ok,224142,
+CSU,kpis,ok,140,
+CSU,ratios,ok,6731,
+CSU,quote,ok,478,
+CSU,statement_income,ok,5567,
+csu,company_profile,ok,224142,
+toi,company_profile,ok,113801,
+tfii,company_profile,ok,269977,
+wsp,company_profile,ok,430740,
+aecon,company_profile,ok,248144,
+CSU,ratios,ok,6731,
+CSU,quote,ok,478,
+CSU,marketcap_history,fail,0,404 NO_DATA: No historical data found for symbol: CSU (/stocks/historical/CSU/marketcap)
+CSU,price_history,empty,2,
+CSU,transcript_dates,ok,4554,
+CSU,statement_income,ok,5567,
+CSU,statement_balance,ok,7414,
+CSU,statement_cash,ok,5474,
+CSU,transcript_2026_Q3,ok,,
+CSU,transcript_2026_Q2,ok,,
+CSU,transcript_2026_Q1,ok,,
+CSU,transcript_2025_Q4,ok,,
+TOI,ratios,ok,6877,
+TOI,quote,ok,463,
+TOI,marketcap_history,ok,8688,
+TOI,price_history,ok,24742,
+TOI,transcript_dates,ok,414,
+TOI,statement_income,ok,5635,
+TOI,statement_balance,ok,7468,
+TOI,statement_cash,ok,5606,
+TOI,transcript_2026_Q3,ok,,
+TOI,transcript_2026_Q2,ok,,
+TOI,transcript_2026_Q1,ok,,
+TOI,transcript_2025_Q4,ok,,
+TFII,ratios,ok,7045,
+TFII,quote,ok,466,
+TFII,marketcap_history,ok,12220,
+TFII,price_history,ok,26020,
+TFII,transcript_dates,ok,3710,
+TFII,statement_income,ok,5770,
+TFII,statement_balance,ok,7838,
+TFII,statement_cash,ok,5751,
+TFII,transcript_2026_Q3,ok,,
+TFII,transcript_2026_Q2,ok,,
+TFII,transcript_2025_Q4,ok,,
+TFII,transcript_2025_Q3,ok,,
+WSP,ratios,fail,0,500 EXTERNAL_API_ERROR: Failed to fetch financial ratios for WSP (/financials/ratios/WSP)
+WSP,quote,fail,0,404 NOT_FOUND: Stock quote with identifier 'WSP' not found (/stocks/quotes/WSP)
+WSP,marketcap_history,fail,0,404 NO_DATA: No historical data found for symbol: WSP (/stocks/historical/WSP/marketcap)
+WSP,price_history,empty,2,
+WSP,transcript_dates,empty,2,
+WSP,statement_income,fail,0,500 EXTERNAL_API_ERROR: Failed to fetch income statement for WSP (/financials/statements/WSP/income)
+WSP,statement_balance,fail,0,500 EXTERNAL_API_ERROR: Failed to fetch balance sheet for WSP (/financials/statements/WSP/balance)
+WSP,statement_cash,fail,0,500 EXTERNAL_API_ERROR: Failed to fetch cash flow statement for WSP (/financials/statements/WSP/cash)
+ARE,ratios,ok,6909,
+ARE,quote,ok,477,
+ARE,marketcap_history,ok,11495,
+ARE,price_history,ok,25518,
+ARE,transcript_dates,ok,5106,
+ARE,statement_income,ok,5729,
+ARE,statement_balance,ok,7681,
+ARE,statement_cash,ok,5661,
+ARE,transcript_2026_Q3,ok,,
+ARE,transcript_2026_Q2,ok,,
+ARE,transcript_2026_Q1,ok,,
+ARE,transcript_2025_Q4,ok,,
+CSU.TO,ratios,ok,7069,
+CSU.TO,quote,ok,492,
+CSU.TO,marketcap_history,ok,12226,
+CSU.TO,price_history,ok,26611,
+CSU.TO,transcript_dates,ok,2016,
+CSU.TO,statement_income,ok,5794,
+CSU.TO,statement_balance,ok,8047,
+CSU.TO,statement_cash,ok,5770,
+CSU.TO,transcript_2026_Q3,ok,,
+CSU.TO,transcript_2026_Q2,ok,,
+CSU.TO,transcript_2026_Q1,ok,,
+CSU.TO,transcript_2025_Q4,ok,,
+TOI.V,ratios,ok,7010,
+TOI.V,quote,ok,455,
+TOI.V,marketcap_history,ok,12021,
+TOI.V,price_history,ok,25351,
+TOI.V,transcript_dates,ok,71,
+TOI.V,statement_income,ok,5777,
+TOI.V,statement_balance,ok,7872,
+TOI.V,statement_cash,ok,5625,
+TOI.V,transcript_2021_Q1,ok,,
+TFII.TO,ratios,ok,7071,
+TFII.TO,quote,ok,483,
+TFII.TO,marketcap_history,ok,12363,
+TFII.TO,price_history,ok,26351,
+TFII.TO,transcript_dates,ok,3869,
+TFII.TO,statement_income,ok,5732,
+TFII.TO,statement_balance,ok,7793,
+TFII.TO,statement_cash,ok,5767,
+TFII.TO,transcript_2026_Q3,ok,,
+TFII.TO,transcript_2026_Q2,ok,,
+TFII.TO,transcript_2025_Q4,ok,,
+TFII.TO,transcript_2025_Q3,ok,,
+WSP.TO,ratios,ok,6987,
+WSP.TO,quote,ok,467,
+WSP.TO,marketcap_history,ok,12482,
+WSP.TO,price_history,ok,26254,
+WSP.TO,transcript_dates,ok,3096,
+WSP.TO,statement_income,ok,5758,
+WSP.TO,statement_balance,ok,7984,
+WSP.TO,statement_cash,ok,5687,
+WSP.TO,transcript_2026_Q3,ok,,
+WSP.TO,transcript_2026_Q2,ok,,
+WSP.TO,transcript_2025_Q4,ok,,
+WSP.TO,transcript_2025_Q3,ok,,
+ARE.TO,ratios,ok,7108,
+ARE.TO,quote,ok,457,
+ARE.TO,marketcap_history,ok,12218,
+ARE.TO,price_history,ok,25575,
+ARE.TO,transcript_dates,ok,2808,
+ARE.TO,statement_income,ok,5738,
+ARE.TO,statement_balance,ok,7788,
+ARE.TO,statement_cash,ok,5664,
+ARE.TO,transcript_2026_Q3,ok,,
+ARE.TO,transcript_2026_Q2,ok,,
+ARE.TO,transcript_2025_Q4,ok,,
+ARE.TO,transcript_2025_Q3,ok,,
+AME,quote,ok,461,
+AME,statement_income,ok,5756,
+AME,statement_balance,ok,7878,
+AME,statement_cash,ok,5773,
+WCN,quote,ok,472,
+WCN,statement_income,ok,5833,
+WCN,statement_balance,ok,7896,
+WCN,statement_cash,ok,5709,
+BRO,quote,ok,463,
+BRO,statement_income,ok,5677,
+BRO,statement_balance,ok,7852,
+BRO,statement_cash,ok,5781,
+IEX,quote,ok,462,
+IEX,statement_income,ok,5718,
+IEX,statement_balance,ok,7866,
+IEX,statement_cash,ok,5749,
+ETN,quote,ok,468,
+ETN,statement_income,ok,5770,
+ETN,statement_balance,ok,7984,
+ETN,statement_cash,ok,5820,
+ROP,quote,ok,475,
+ROP,statement_income,ok,5755,
+ROP,statement_balance,ok,7933,
+ROP,statement_cash,ok,5733,
+TDY,quote,ok,486,
+TDY,statement_income,ok,5808,
+TDY,statement_balance,ok,7717,
+TDY,statement_cash,ok,5679,
+TDG,quote,ok,475,
+TDG,statement_income,ok,5798,
+TDG,statement_balance,ok,7899,
+TDG,statement_cash,ok,5771,
+ACM,quote,ok,445,
+ACM,statement_income,ok,5813,
+ACM,statement_balance,ok,7950,
+ACM,statement_cash,ok,5744,
+HEI,quote,ok,465,
+HEI,statement_income,ok,5696,
+HEI,statement_balance,ok,7759,
+HEI,statement_cash,ok,5722,
+J,quote,ok,467,
+J,statement_income,ok,5759,
+J,statement_balance,ok,7868,
+J,statement_cash,ok,5759,
+POOL,quote,ok,467,
+POOL,statement_income,ok,5727,
+POOL,statement_balance,ok,7750,
+POOL,statement_cash,ok,5689,
+WSO,quote,ok,459,
+WSO,statement_income,ok,5715,
+WSO,statement_balance,ok,7664,
+WSO,statement_cash,ok,5744,
+DHR,quote,ok,469,
+DHR,statement_income,ok,5812,
+DHR,statement_balance,ok,8024,
+DHR,statement_cash,ok,5875,

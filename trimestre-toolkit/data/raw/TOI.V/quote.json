@@ -1,0 +1,32 @@
+{
+  "success": true,
+  "data": {
+    "symbol": "TOI.V",
+    "name": "Topicus.com Inc.",
+    "price": 99.37,
+    "change": -1.26,
+    "changesPercentage": -1.25211,
+    "dayLow": 98,
+    "dayHigh": 100.71,
+    "yearHigh": 136.45,
+    "yearLow": 82.67,
+    "marketCap": 8300267022,
+    "priceAvg50": 93.3612,
+    "priceAvg200": 96.22125,
+    "volume": 32547,
+    "avgVolume": null,
+    "exchange": "TSXV",
+    "open": 98,
+    "previousClose": 100.63,
+    "eps": null,
+    "pe": null,
+    "earningsAnnouncement": null,
+    "sharesOutstanding": null,
+    "timestamp": 1794517200
+  },
+  "meta": {
+    "timestamp": "2026-11-12T22:18:53.895Z",
+    "cached": false,
+    "source": "market"
+  }
+}

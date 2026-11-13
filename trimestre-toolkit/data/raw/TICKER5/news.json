@@ -1,0 +1,12 @@
+{
+  "success": true,
+  "data": [],
+  "meta": {
+    "timestamp": "2026-11-12T22:12:07.254Z",
+    "source": "market",
+    "cached": false,
+    "page": 0,
+    "limit": 100,
+    "symbol": "TICKER5"
+  }
+}

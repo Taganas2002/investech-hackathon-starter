@@ -1,0 +1,32 @@
+{
+  "success": true,
+  "data": {
+    "symbol": "WSO",
+    "name": "Watsco, Inc.",
+    "price": 308.24,
+    "change": -4.91,
+    "changesPercentage": -1.56794,
+    "dayLow": 308.16,
+    "dayHigh": 317.25,
+    "yearHigh": 459,
+    "yearLow": 277.34,
+    "marketCap": 12839952352,
+    "priceAvg50": 306.0496,
+    "priceAvg200": 363.32834,
+    "volume": 346429,
+    "avgVolume": null,
+    "exchange": "NYSE",
+    "open": 314.8,
+    "previousClose": 313.15,
+    "eps": null,
+    "pe": null,
+    "earningsAnnouncement": null,
+    "sharesOutstanding": null,
+    "timestamp": 1794517202
+  },
+  "meta": {
+    "timestamp": "2026-11-12T22:46:32.747Z",
+    "cached": true,
+    "source": "market"
+  }
+}

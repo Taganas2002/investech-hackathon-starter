@@ -1,0 +1,32 @@
+{
+  "success": true,
+  "data": {
+    "symbol": "CSU",
+    "name": "Capital Senior Living Corporation",
+    "price": 33.54,
+    "change": -0.715,
+    "changesPercentage": -2.08729,
+    "dayLow": 32.46,
+    "dayHigh": 33.95,
+    "yearHigh": 58.94,
+    "yearLow": 10.499947,
+    "marketCap": 223710123,
+    "priceAvg50": 31.4597,
+    "priceAvg200": 37.51541,
+    "volume": 12686,
+    "avgVolume": null,
+    "exchange": "NYSE",
+    "open": 32.47,
+    "previousClose": 34.255,
+    "eps": null,
+    "pe": null,
+    "earningsAnnouncement": null,
+    "sharesOutstanding": null,
+    "timestamp": 1636952400
+  },
+  "meta": {
+    "timestamp": "2026-11-12T22:14:49.063Z",
+    "cached": false,
+    "source": "market"
+  }
+}

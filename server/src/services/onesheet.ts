@@ -67,6 +67,32 @@ interface GrowthRow {
   growthRevenue?: number
 }
 
+interface IncomeRow {
+  date?: string
+  period?: string
+  revenue?: number
+  ebitda?: number
+  ebitdaratio?: number
+  netIncome?: number
+}
+
+interface BalanceRow {
+  date?: string
+  period?: string
+  totalStockholdersEquity?: number
+}
+
+interface KpiMetric {
+  metricId?: string
+  metricName?: string
+}
+
+interface KpiPeriod {
+  periodType?: string
+  reportDate?: string
+  metricsValues?: Record<string, number>
+}
+
 const CACHE_MS = 5 * 60 * 1000
 const MAX_IN_FLIGHT = 1
 let cache: Dataset | null = null
@@ -124,15 +150,19 @@ async function loadCompany(company: ProfileCompany): Promise<NormalizedCompany |
   if (!found) return null
   const { ticker, quote } = found
 
-  const [profile, ratios, growth] = await Promise.all([
+  const [profile, ratios, growth, incomeRows, balanceRows, kpis] = await Promise.all([
     readData<MarketProfile>(`/stocks/fundamentals/${encodeURIComponent(ticker)}/profile`),
     readData<RatioSummary>(`/financials/ratios/${encodeURIComponent(ticker)}/summary`),
     readData<GrowthRow[]>(`/financials/growth/${encodeURIComponent(ticker)}`),
+    readData<IncomeRow[]>(`/financials/statements/${encodeURIComponent(ticker)}/income`),
+    readData<BalanceRow[]>(`/financials/statements/${encodeURIComponent(ticker)}/balance`),
+    readData<{ metrics?: KpiMetric[]; data?: KpiPeriod[] }>(`/kpis/segments-and-kpis/${encodeURIComponent(ticker)}`),
   ])
 
-  const latestGrowth = [...(growth ?? [])]
-    .filter((row) => row.period === "FY" && row.date)
-    .sort((a, b) => (b.date ?? "").localeCompare(a.date ?? ""))[0]
+  const latestGrowth = latestFy(growth)
+  const latestIncome = latestFy(incomeRows)
+  const latestBalance = latestFy(balanceRows)
+  const sectorKpi = pickSectorKpi(kpis)
   const industry = profile?.industry
   const exchange = profile?.exchangeShortName || listing.exchange
 
@@ -142,8 +172,10 @@ async function loadCompany(company: ProfileCompany): Promise<NormalizedCompany |
     sector: profile?.sector || "Uncategorized",
     revenueGrowth: asPercent(latestGrowth?.growthRevenue),
     grossMargin: asPercent(ratios?.profitability?.grossMargin),
+    ebitdaMargin: ebitdaMarginFrom(latestIncome),
     netMargin: asPercent(ratios?.profitability?.netMargin),
-    roe: asPercent(ratios?.profitability?.roe),
+    roe: roeFrom(ratios, latestIncome, latestBalance),
+    sectorKpis: sectorKpi ? { sectorKpi: sectorKpi.value, __label: sectorKpi.label } : undefined,
     debtToEquity: asRatio(ratios?.leverage?.debtToEquity),
     peRatio: asRatio(ratios?.valuation?.peRatio),
     currentPrice: finite(quote?.price),
@@ -175,6 +207,67 @@ function symbolCandidates(listing: Listing): string[] {
   if (exchange === "TSX") return [`${compact}.TO`]
   if (exchange === "TSXV") return [`${compact}.V`, `${compact}.TO`]
   return [compact]
+}
+
+function latestFy<T extends { date?: string; period?: string }>(rows: T[] | undefined): T | undefined {
+  return [...(rows ?? [])]
+    .filter((row) => row.period === "FY" && row.date)
+    .sort((a, b) => (b.date ?? "").localeCompare(a.date ?? ""))[0]
+}
+
+function ebitdaMarginFrom(row: IncomeRow | undefined): number | undefined {
+  if (!row) return undefined
+  if (typeof row.ebitdaratio === "number" && row.ebitdaratio !== 0 && Number.isFinite(row.ebitdaratio)) {
+    return asPercent(row.ebitdaratio)
+  }
+  if (typeof row.ebitda === "number" && typeof row.revenue === "number" && row.revenue !== 0) {
+    return round1((row.ebitda / row.revenue) * 100)
+  }
+  return undefined
+}
+
+function roeFrom(ratios: RatioSummary | undefined, income: IncomeRow | undefined, balance: BalanceRow | undefined): number | undefined {
+  const reported = asPercent(ratios?.profitability?.roe)
+  if (reported !== undefined) return reported
+  const equity = balance?.totalStockholdersEquity
+  const netIncome = income?.netIncome
+  if (typeof netIncome === "number" && typeof equity === "number" && equity !== 0) {
+    return round1((netIncome / equity) * 100)
+  }
+  return undefined
+}
+
+function pickSectorKpi(payload: { metrics?: KpiMetric[]; data?: KpiPeriod[] } | undefined): { label: string; value: number } | undefined {
+  const annual = [...(payload?.data ?? [])]
+    .filter((row) => row.periodType === "Annual" && row.metricsValues)
+    .sort((a, b) => (b.reportDate ?? "").localeCompare(a.reportDate ?? ""))
+  const latest = annual[0]?.metricsValues
+  if (!latest) return undefined
+  const prior = annual[1]?.metricsValues
+  const names = new Map((payload?.metrics ?? []).map((metric) => [metric.metricId, metric.metricName]))
+
+  const occupancy = Object.entries(latest).find(
+    ([key, value]) => key.includes("occupancy") && value > 1 && value <= 100,
+  )
+  if (occupancy) return { label: names.get(occupancy[0]) || "Occupancy", value: round1(occupancy[1]) }
+
+  const growth = yearOverYear(latest, prior, "service_backlogs")
+  if (growth !== undefined) return { label: "Service backlog growth", value: growth }
+
+  const noiKey = Object.keys(latest).find((key) => key.includes("noi"))
+  if (noiKey) {
+    const noiGrowth = yearOverYear(latest, prior, noiKey)
+    if (noiGrowth !== undefined) return { label: `${names.get(noiKey) || "NOI"} growth`, value: noiGrowth }
+  }
+  return undefined
+}
+
+function yearOverYear(latest: Record<string, number>, prior: Record<string, number> | undefined, key: string): number | undefined {
+  const current = latest[key]
+  const previous = prior?.[key]
+  if (typeof current !== "number" || typeof previous !== "number" || previous === 0) return undefined
+  const growth = ((current - previous) / Math.abs(previous)) * 100
+  return Number.isFinite(growth) ? round1(growth) : undefined
 }
 
 async function fillGaps(companies: NormalizedCompany[], prices: NormalizedPrice[]) {
@@ -228,6 +321,9 @@ async function readData<T>(path: string): Promise<T | undefined> {
         return (payload as { data?: T }).data
       } catch (error) {
         const status = axios.isAxiosError(error) ? error.response?.status : undefined
+        if (status === 401 || status === 403) {
+          throw new Error(onesheetMessage(error) ?? "Onesheet rejected this API key. It is invalid or revoked.")
+        }
         const retryable =
           status === 429 ||
           status === 502 ||
@@ -244,6 +340,18 @@ async function readData<T>(path: string): Promise<T | undefined> {
     }
     return undefined
   })
+}
+
+function onesheetMessage(error: unknown): string | undefined {
+  if (!axios.isAxiosError(error)) return undefined
+  const data = error.response?.data
+  if (!data || typeof data !== "object" || !("error" in data)) return undefined
+  const inner = (data as { error: unknown }).error
+  if (typeof inner === "string") return inner
+  if (inner && typeof inner === "object" && "message" in inner && typeof (inner as { message: unknown }).message === "string") {
+    return (inner as { message: string }).message
+  }
+  return undefined
 }
 
 function limit<T>(work: () => Promise<T>): Promise<T> {
