@@ -3,7 +3,24 @@ import { dirname, join } from "node:path"
 import { fileURLToPath } from "node:url"
 
 const here = dirname(fileURLToPath(import.meta.url))
-const DATA_DIR = join(here, "../../../trimestre-toolkit/dashboard_data")
+
+function resolveDataDir(): string {
+  const fromEnv = process.env.TOOLKIT_DATA_DIR?.trim()
+  if (fromEnv && existsSync(join(fromEnv, "manifest.json"))) return fromEnv
+
+  const candidates = [
+    // Vercel / packaged server copy (server/dashboard_data)
+    join(here, "../../dashboard_data"),
+    // Local monorepo layout (trimestre-toolkit/dashboard_data)
+    join(here, "../../../trimestre-toolkit/dashboard_data"),
+  ]
+  for (const candidate of candidates) {
+    if (existsSync(join(candidate, "manifest.json"))) return candidate
+  }
+  return candidates[0]
+}
+
+const DATA_DIR = resolveDataDir()
 
 export function toolkitReady(): boolean {
   return existsSync(join(DATA_DIR, "manifest.json"))

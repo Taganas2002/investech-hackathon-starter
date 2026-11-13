@@ -1,0 +1,31 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "services": {
+    "client": {
+      "root": "client",
+      "framework": "vite"
+    },
+    "server": {
+      "root": "server",
+      "framework": "express",
+      "entrypoint": "src/index.ts",
+      "buildCommand": "node scripts/sync-dashboard-data.mjs",
+      "functions": {
+        "src/index.ts": {
+          "includeFiles": "dashboard_data/**",
+          "maxDuration": 60
+        }
+      }
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": { "service": "server" }
+    },
+    {
+      "source": "/(.*)",
+      "destination": { "service": "client" }
+    }
+  ]
+}

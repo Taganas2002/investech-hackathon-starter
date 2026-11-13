@@ -37,6 +37,10 @@ app.use((error: unknown, _req: Request, res: Response, _next: NextFunction) => {
   res.status(status).json({ error: message })
 })
 
-app.listen(port, () => {
-  console.log(`Competitive Edge proxy listening on http://localhost:${port}`)
-})
+export default app
+
+if (!process.env.VERCEL) {
+  app.listen(port, () => {
+    console.log(`Competitive Edge proxy listening on http://localhost:${port}`)
+  })
+}
