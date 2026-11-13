@@ -7,7 +7,10 @@ import { fileURLToPath } from "node:url"
 const CACHE_TTL_MS = 6 * 60 * 60 * 1000
 const MAX_IN_FLIGHT = 3
 const here = dirname(fileURLToPath(import.meta.url))
-const CACHE_DIR = join(here, "../../.cache/onesheet")
+/** Vercel functions are read-only except /tmp; use that on deploy. */
+const CACHE_DIR = process.env.VERCEL
+  ? join("/tmp", "onesheet-cache")
+  : join(here, "../../.cache/onesheet")
 
 type CacheEntry = { at: number; data: unknown }
 
@@ -85,7 +88,7 @@ async function requestWithRetry(path: string): Promise<unknown> {
 function readCache(path: string): unknown | undefined {
   const mem = memory.get(path)
   if (mem && Date.now() - mem.at < CACHE_TTL_MS) return mem.data
-  ensureCacheDir()
+  if (!ensureCacheDir()) return undefined
   const file = cacheFile(path)
   if (!existsSync(file)) return undefined
   try {
@@ -103,8 +106,12 @@ function readCache(path: string): unknown | undefined {
 function writeCache(path: string, data: unknown) {
   const entry = { at: Date.now(), data }
   memory.set(path, entry)
-  ensureCacheDir()
-  writeFileSync(cacheFile(path), JSON.stringify(entry))
+  if (!ensureCacheDir()) return
+  try {
+    writeFileSync(cacheFile(path), JSON.stringify(entry))
+  } catch {
+    // Memory cache still works if disk is unavailable.
+  }
 }
 
 function cacheFile(path: string) {
@@ -112,8 +119,13 @@ function cacheFile(path: string) {
   return join(CACHE_DIR, `${hash}.json`)
 }
 
-function ensureCacheDir() {
-  if (!existsSync(CACHE_DIR)) mkdirSync(CACHE_DIR, { recursive: true })
+function ensureCacheDir(): boolean {
+  try {
+    if (!existsSync(CACHE_DIR)) mkdirSync(CACHE_DIR, { recursive: true })
+    return true
+  } catch {
+    return false
+  }
 }
 
 function limit<T>(work: () => Promise<T>): Promise<T> {

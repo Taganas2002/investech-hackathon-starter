@@ -17,6 +17,9 @@ app.get("/api/health", (_req, res) => {
   res.json({
     ok: true,
     proxyConfigured: Boolean(process.env.ORGANIZER_API_URL?.trim()),
+    apiKeyConfigured: Boolean(
+      process.env.ORGANIZER_API_KEY?.trim() || process.env.ONESHEET_API_KEY?.trim(),
+    ),
     toolkitReady: toolkitReady(),
   })
 })
