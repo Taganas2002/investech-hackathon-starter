@@ -1,0 +1,47 @@
+{
+  "success": true,
+  "data": [
+    {
+      "symbol": "TOI",
+      "year": 2026,
+      "quarter": 3,
+      "date": "2026-11-05"
+    },
+    {
+      "symbol": "TOI",
+      "year": 2026,
+      "quarter": 2,
+      "date": "2026-08-06"
+    },
+    {
+      "symbol": "TOI",
+      "year": 2026,
+      "quarter": 1,
+      "date": "2026-05-07"
+    },
+    {
+      "symbol": "TOI",
+      "year": 2025,
+      "quarter": 4,
+      "date": "2026-03-12"
+    },
+    {
+      "symbol": "TOI",
+      "year": 2025,
+      "quarter": 3,
+      "date": "2025-11-13"
+    },
+    {
+      "symbol": "TOI",
+      "year": 2025,
+      "quarter": 2,
+      "date": "2025-08-13"
+    }
+  ],
+  "meta": {
+    "timestamp": "2026-11-12T22:17:07.493Z",
+    "cached": false,
+    "source": "market",
+    "total": 6
+  }
+}

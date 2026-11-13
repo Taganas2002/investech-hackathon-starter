@@ -1,0 +1,455 @@
+{
+  "success": true,
+  "data": [
+    {
+      "symbol": "ARE",
+      "year": 2026,
+      "quarter": 3,
+      "date": "2026-10-27"
+    },
+    {
+      "symbol": "ARE",
+      "year": 2026,
+      "quarter": 2,
+      "date": "2026-08-04"
+    },
+    {
+      "symbol": "ARE",
+      "year": 2026,
+      "quarter": 1,
+      "date": "2026-04-28"
+    },
+    {
+      "symbol": "ARE",
+      "year": 2025,
+      "quarter": 4,
+      "date": "2026-01-27"
+    },
+    {
+      "symbol": "ARE",
+      "year": 2025,
+      "quarter": 3,
+      "date": "2025-10-28"
+    },
+    {
+      "symbol": "ARE",
+      "year": 2025,
+      "quarter": 2,
+      "date": "2025-07-22"
+    },
+    {
+      "symbol": "ARE",
+      "year": 2025,
+      "quarter": 1,
+      "date": "2025-04-29"
+    },
+    {
+      "symbol": "ARE",
+      "year": 2024,
+      "quarter": 4,
+      "date": "2025-01-28"
+    },
+    {
+      "symbol": "ARE",
+      "year": 2024,
+      "quarter": 3,
+      "date": "2024-10-22"
+    },
+    {
+      "symbol": "ARE",
+      "year": 2024,
+      "quarter": 2,
+      "date": "2024-07-23"
+    },
+    {
+      "symbol": "ARE",
+      "year": 2024,
+      "quarter": 1,
+      "date": "2024-04-23"
+    },
+    {
+      "symbol": "ARE",
+      "year": 2023,
+      "quarter": 4,
+      "date": "2024-01-30"
+    },
+    {
+      "symbol": "ARE",
+      "year": 2023,
+      "quarter": 3,
+      "date": "2023-10-24"
+    },
+    {
+      "symbol": "ARE",
+      "year": 2023,
+      "quarter": 2,
+      "date": "2023-07-25"
+    },
+    {
+      "symbol": "ARE",
+      "year": 2023,
+      "quarter": 1,
+      "date": "2023-04-25"
+    },
+    {
+      "symbol": "ARE",
+      "year": 2022,
+      "quarter": 4,
+      "date": "2022-01-31"
+    },
+    {
+      "symbol": "ARE",
+      "year": 2022,
+      "quarter": 3,
+      "date": "2022-10-25"
+    },
+    {
+      "symbol": "ARE",
+      "year": 2022,
+      "quarter": 2,
+      "date": "2022-07-26"
+    },
+    {
+      "symbol": "ARE",
+      "year": 2022,
+      "quarter": 1,
+      "date": "2022-04-26"
+    },
+    {
+      "symbol": "ARE",
+      "year": 2021,
+      "quarter": 4,
+      "date": "2022-02-01"
+    },
+    {
+      "symbol": "ARE",
+      "year": 2021,
+      "quarter": 3,
+      "date": "2021-10-26"
+    },
+    {
+      "symbol": "ARE",
+      "year": 2021,
+      "quarter": 2,
+      "date": "2021-07-27"
+    },
+    {
+      "symbol": "ARE",
+      "year": 2021,
+      "quarter": 1,
+      "date": "2021-04-27"
+    },
+    {
+      "symbol": "ARE",
+      "year": 2020,
+      "quarter": 4,
+      "date": "2021-02-02"
+    },
+    {
+      "symbol": "ARE",
+      "year": 2020,
+      "quarter": 3,
+      "date": "2020-10-27"
+    },
+    {
+      "symbol": "ARE",
+      "year": 2020,
+      "quarter": 2,
+      "date": "2020-07-27"
+    },
+    {
+      "symbol": "ARE",
+      "year": 2020,
+      "quarter": 1,
+      "date": "2020-04-28"
+    },
+    {
+      "symbol": "ARE",
+      "year": 2019,
+      "quarter": 4,
+      "date": "2020-02-04"
+    },
+    {
+      "symbol": "ARE",
+      "year": 2019,
+      "quarter": 3,
+      "date": "2019-10-29"
+    },
+    {
+      "symbol": "ARE",
+      "year": 2019,
+      "quarter": 2,
+      "date": "2019-07-30"
+    },
+    {
+      "symbol": "ARE",
+      "year": 2019,
+      "quarter": 1,
+      "date": "2019-04-30"
+    },
+    {
+      "symbol": "ARE",
+      "year": 2018,
+      "quarter": 4,
+      "date": "2019-02-05"
+    },
+    {
+      "symbol": "ARE",
+      "year": 2018,
+      "quarter": 3,
+      "date": "2018-10-30"
+    },
+    {
+      "symbol": "ARE",
+      "year": 2018,
+      "quarter": 2,
+      "date": "2018-07-31"
+    },
+    {
+      "symbol": "ARE",
+      "year": 2018,
+      "quarter": 1,
+      "date": "2018-05-01"
+    },
+    {
+      "symbol": "ARE",
+      "year": 2017,
+      "quarter": 4,
+      "date": "2018-01-30"
+    },
+    {
+      "symbol": "ARE",
+      "year": 2017,
+      "quarter": 3,
+      "date": "2017-10-31"
+    },
+    {
+      "symbol": "ARE",
+      "year": 2017,
+      "quarter": 2,
+      "date": "2017-08-01"
+    },
+    {
+      "symbol": "ARE",
+      "year": 2017,
+      "quarter": 1,
+      "date": "2017-05-02"
+    },
+    {
+      "symbol": "ARE",
+      "year": 2016,
+      "quarter": 4,
+      "date": "2017-01-31"
+    },
+    {
+      "symbol": "ARE",
+      "year": 2016,
+      "quarter": 3,
+      "date": "2016-11-01"
+    },
+    {
+      "symbol": "ARE",
+      "year": 2016,
+      "quarter": 2,
+      "date": "2016-08-02"
+    },
+    {
+      "symbol": "ARE",
+      "year": 2016,
+      "quarter": 1,
+      "date": "2016-05-03"
+    },
+    {
+      "symbol": "ARE",
+      "year": 2015,
+      "quarter": 4,
+      "date": "2016-02-02"
+    },
+    {
+      "symbol": "ARE",
+      "year": 2015,
+      "quarter": 3,
+      "date": "2015-11-03"
+    },
+    {
+      "symbol": "ARE",
+      "year": 2015,
+      "quarter": 2,
+      "date": "2015-07-28"
+    },
+    {
+      "symbol": "ARE",
+      "year": 2015,
+      "quarter": 1,
+      "date": "2015-04-28"
+    },
+    {
+      "symbol": "ARE",
+      "year": 2014,
+      "quarter": 4,
+      "date": "2015-02-03"
+    },
+    {
+      "symbol": "ARE",
+      "year": 2014,
+      "quarter": 3,
+      "date": "2014-11-03"
+    },
+    {
+      "symbol": "ARE",
+      "year": 2014,
+      "quarter": 2,
+      "date": "2014-07-29"
+    },
+    {
+      "symbol": "ARE",
+      "year": 2014,
+      "quarter": 1,
+      "date": "2014-05-06"
+    },
+    {
+      "symbol": "ARE",
+      "year": 2013,
+      "quarter": 4,
+      "date": "2014-02-04"
+    },
+    {
+      "symbol": "ARE",
+      "year": 2013,
+      "quarter": 3,
+      "date": "2013-10-29"
+    },
+    {
+      "symbol": "ARE",
+      "year": 2013,
+      "quarter": 2,
+      "date": "2013-07-30"
+    },
+    {
+      "symbol": "ARE",
+      "year": 2013,
+      "quarter": 1,
+      "date": "2013-04-30"
+    },
+    {
+      "symbol": "ARE",
+      "year": 2012,
+      "quarter": 4,
+      "date": "2013-02-07"
+    },
+    {
+      "symbol": "ARE",
+      "year": 2012,
+      "quarter": 3,
+      "date": "2012-10-29"
+    },
+    {
+      "symbol": "ARE",
+      "year": 2012,
+      "quarter": 2,
+      "date": "2012-07-31"
+    },
+    {
+      "symbol": "ARE",
+      "year": 2012,
+      "quarter": 1,
+      "date": "2012-05-02"
+    },
+    {
+      "symbol": "ARE",
+      "year": 2011,
+      "quarter": 4,
+      "date": "2012-02-08"
+    },
+    {
+      "symbol": "ARE",
+      "year": 2011,
+      "quarter": 3,
+      "date": "2011-10-26"
+    },
+    {
+      "symbol": "ARE",
+      "year": 2011,
+      "quarter": 2,
+      "date": "2011-07-28"
+    },
+    {
+      "symbol": "ARE",
+      "year": 2011,
+      "quarter": 1,
+      "date": "2011-05-05"
+    },
+    {
+      "symbol": "ARE",
+      "year": 2010,
+      "quarter": 4,
+      "date": "2011-02-03"
+    },
+    {
+      "symbol": "ARE",
+      "year": 2010,
+      "quarter": 3,
+      "date": "2010-11-03"
+    },
+    {
+      "symbol": "ARE",
+      "year": 2010,
+      "quarter": 2,
+      "date": "2010-07-29"
+    },
+    {
+      "symbol": "ARE",
+      "year": 2010,
+      "quarter": 1,
+      "date": "2010-04-29"
+    },
+    {
+      "symbol": "ARE",
+      "year": 2009,
+      "quarter": 4,
+      "date": "2010-02-11"
+    },
+    {
+      "symbol": "ARE",
+      "year": 2009,
+      "quarter": 2,
+      "date": "2009-08-06"
+    },
+    {
+      "symbol": "ARE",
+      "year": 2008,
+      "quarter": 4,
+      "date": "2009-02-09"
+    },
+    {
+      "symbol": "ARE",
+      "year": 2008,
+      "quarter": 3,
+      "date": "2008-10-30"
+    },
+    {
+      "symbol": "ARE",
+      "year": 2008,
+      "quarter": 2,
+      "date": "2008-08-07"
+    },
+    {
+      "symbol": "ARE",
+      "year": 2008,
+      "quarter": 1,
+      "date": "2008-05-09"
+    },
+    {
+      "symbol": "ARE",
+      "year": 2007,
+      "quarter": 4,
+      "date": "2008-02-12"
+    }
+  ],
+  "meta": {
+    "timestamp": "2026-11-12T22:17:11.772Z",
+    "cached": false,
+    "source": "market",
+    "total": 74
+  }
+}

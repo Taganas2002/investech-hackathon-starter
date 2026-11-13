@@ -1,0 +1,32 @@
+{
+  "success": true,
+  "data": {
+    "symbol": "POOL",
+    "name": "Pool Corporation",
+    "price": 214.24,
+    "change": -1.54,
+    "changesPercentage": -0.71369,
+    "dayLow": 213.58,
+    "dayHigh": 219.405,
+    "yearHigh": 278.17,
+    "yearLow": 152.7,
+    "marketCap": 7653102704,
+    "priceAvg50": 179.494,
+    "priceAvg200": 200.3351,
+    "volume": 503815,
+    "avgVolume": null,
+    "exchange": "NASDAQ",
+    "open": 216.45,
+    "previousClose": 215.78,
+    "eps": null,
+    "pe": null,
+    "earningsAnnouncement": null,
+    "sharesOutstanding": null,
+    "timestamp": 1794517200
+  },
+  "meta": {
+    "timestamp": "2026-11-12T22:46:32.359Z",
+    "cached": true,
+    "source": "market"
+  }
+}

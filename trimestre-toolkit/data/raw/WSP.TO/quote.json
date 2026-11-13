@@ -1,0 +1,32 @@
+{
+  "success": true,
+  "data": {
+    "symbol": "WSP.TO",
+    "name": "WSP Global Inc.",
+    "price": 184.33,
+    "change": -0.34,
+    "changesPercentage": -0.18411,
+    "dayLow": 181.3,
+    "dayHigh": 186.01,
+    "yearHigh": 275.24,
+    "yearLow": 156.64,
+    "marketCap": 24850817857,
+    "priceAvg50": 178.9936,
+    "priceAvg200": 199.65405,
+    "volume": 399688,
+    "avgVolume": null,
+    "exchange": "TSX",
+    "open": 185.13,
+    "previousClose": 184.67,
+    "eps": null,
+    "pe": null,
+    "earningsAnnouncement": null,
+    "sharesOutstanding": null,
+    "timestamp": 1794517200
+  },
+  "meta": {
+    "timestamp": "2026-11-12T22:18:56.372Z",
+    "cached": false,
+    "source": "market"
+  }
+}

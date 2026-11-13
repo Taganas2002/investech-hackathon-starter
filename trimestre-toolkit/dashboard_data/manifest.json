@@ -1,0 +1,333 @@
+{
+  "generated_on": "2026-11-13",
+  "files": {
+    "wsp_company.json": {
+      "description": "Identity, description, segments, business lines, subsidiaries, latest quote",
+      "source": {
+        "profile": "Onesheet /company-profiles/wsp",
+        "quote": "Onesheet /stocks/quotes/WSP.TO"
+      }
+    },
+    "wsp_metrics.csv": {
+      "description": "WSP deep-profile metrics, long format: one row per metric x period. Filter by metric_id and period_type (Quarterly, Annual, PointInTime, NineMonths, SemiAnnual). value is in actual units (not millions) unless unit says otherwise.",
+      "source": "Onesheet /company-profiles/wsp (each row has its filing quote)",
+      "rows": 989,
+      "columns": [
+        "period_id",
+        "period_type",
+        "report_date",
+        "fiscal_year",
+        "fiscal_quarter",
+        "metric_id",
+        "metric_name",
+        "value",
+        "unit",
+        "currency",
+        "adjusted",
+        "quote",
+        "form",
+        "filed_on",
+        "n_sources"
+      ],
+      "key_columns": [
+        "metric_id",
+        "period_type",
+        "report_date"
+      ]
+    },
+    "wsp_events.csv": {
+      "description": "All dated/undated WSP events (acquisition, financing, capital-return, milestone, discontinuation, ...). amount_as_written is text as in the filing: units vary, never sum.",
+      "source": "Onesheet /company-profiles/wsp",
+      "rows": 96,
+      "columns": [
+        "type",
+        "status",
+        "date",
+        "date_precision",
+        "period_label",
+        "summary",
+        "counterparty",
+        "amount_as_written",
+        "amount_currency",
+        "attributes",
+        "quote",
+        "form",
+        "filed_on",
+        "n_sources"
+      ]
+    },
+    "wsp_deals.csv": {
+      "description": "Acquisition events de-duplicated (one row per counterparty and date). is_aggregate = many small deals reported as one line.",
+      "source": "Onesheet /company-profiles/wsp, de-duplicated by profiles.py",
+      "rows": 14,
+      "columns": [
+        "date",
+        "counterparty",
+        "amount_as_written",
+        "amount_currency",
+        "is_aggregate",
+        "is_dated",
+        "summary",
+        "quote",
+        "form",
+        "filed_on"
+      ]
+    },
+    "statements_annual.csv": {
+      "description": "Annual statements for WSP, peers and index members; one row per ticker x fiscal year, in each company's reporting currency (see currency). acquisitions_cash is positive when cash was spent.",
+      "source": "Onesheet /financials/statements",
+      "rows": 75,
+      "columns": [
+        "ticker",
+        "company",
+        "group",
+        "fiscal_year",
+        "period_end",
+        "currency",
+        "revenue",
+        "ebitda",
+        "operating_income",
+        "net_income",
+        "eps",
+        "eps_diluted",
+        "shares_diluted",
+        "shares_basic",
+        "operating_cash_flow",
+        "capex",
+        "free_cash_flow",
+        "acquisitions_cash",
+        "shares_issued_cash",
+        "buybacks",
+        "dividends",
+        "equity",
+        "total_debt",
+        "cash",
+        "net_debt",
+        "goodwill_and_intangibles",
+        "tax_rate_used",
+        "nopat",
+        "invested_capital",
+        "roic",
+        "source"
+      ],
+      "key_columns": [
+        "ticker",
+        "fiscal_year"
+      ]
+    },
+    "peer_scorecard.csv": {
+      "description": "Panel 3: WSP vs engineering peers over the last 3 fiscal years. revenue_cagr, fcf_margin (3y FCF / 3y revenue), reinvestment (3y acquisition cash / 3y FCF), roic (last year, NOPAT / (equity + net debt)), net_debt_to_ebitda (last year). rank_* = 1 is best. All ratios, so currency does not matter.",
+      "source": "Computed from statements_annual.csv",
+      "rows": 3,
+      "columns": [
+        "ticker",
+        "company",
+        "group",
+        "currency",
+        "last_fiscal_year",
+        "years_window",
+        "revenue_cagr",
+        "fcf_margin",
+        "reinvestment",
+        "roic",
+        "net_debt_to_ebitda",
+        "rank_revenue_cagr",
+        "rank_fcf_margin",
+        "rank_reinvestment",
+        "rank_roic",
+        "rank_net_debt_to_ebitda",
+        "n_companies"
+      ]
+    },
+    "wsp_per_share.csv": {
+      "description": "Panel 4: WSP per-share series by fiscal year. *_per_share = total / shares_diluted. *_index_first_year_100 rebases each series to 100 in the first year so total vs per-share lines share one chart. *_yoy_growth = change vs previous year.",
+      "source": "Computed from statements_annual.csv (WSP.TO)",
+      "rows": 5,
+      "columns": [
+        "fiscal_year",
+        "period_end",
+        "currency",
+        "shares_diluted",
+        "revenue",
+        "revenue_per_share",
+        "free_cash_flow",
+        "free_cash_flow_per_share",
+        "net_income",
+        "net_income_per_share",
+        "eps_diluted",
+        "revenue_index_first_year_100",
+        "revenue_yoy_growth",
+        "free_cash_flow_index_first_year_100",
+        "free_cash_flow_yoy_growth",
+        "net_income_index_first_year_100",
+        "net_income_yoy_growth",
+        "revenue_per_share_index_first_year_100",
+        "revenue_per_share_yoy_growth",
+        "free_cash_flow_per_share_index_first_year_100",
+        "free_cash_flow_per_share_yoy_growth",
+        "net_income_per_share_index_first_year_100",
+        "net_income_per_share_yoy_growth",
+        "eps_diluted_index_first_year_100",
+        "eps_diluted_yoy_growth",
+        "shares_diluted_index_first_year_100",
+        "shares_diluted_yoy_growth",
+        "source"
+      ]
+    },
+    "prices_daily.csv": {
+      "description": "Panel 6 + Panel 1 price chart: daily prices, one row per ticker x date. Use adj_close for returns. WSP.TO is in CAD, index members in USD (returns are currency-free per stock; note FX effect if mixing).",
+      "source": "Onesheet /stocks/historical/{ticker}",
+      "rows": 100,
+      "columns": [
+        "ticker",
+        "date",
+        "close",
+        "adj_close"
+      ],
+      "key_columns": [
+        "ticker",
+        "date"
+      ]
+    },
+    "wsp_marketcap_daily.csv": {
+      "description": "WSP market cap by date, CAD.",
+      "source": "Onesheet /stocks/historical/WSP.TO/marketcap",
+      "rows": 252,
+      "columns": [
+        "date",
+        "market_cap"
+      ]
+    },
+    "dealroom_wsp.csv": {
+      "description": "Copied from data/external (see its source and quality_flag columns)",
+      "rows": 29
+    },
+    "peer_headcount.csv": {
+      "description": "Copied from data/external (see its source and quality_flag columns)",
+      "rows": 6
+    },
+    "deal_targets.csv": {
+      "description": "Copied from data/external (see its source and quality_flag columns)",
+      "rows": 7
+    },
+    "deal_promises.csv": {
+      "description": "Copied from data/external (see its source and quality_flag columns)",
+      "rows": 8
+    },
+    "deal_target_headcount.csv": {
+      "description": "Copied from data/external (see its source and quality_flag columns)",
+      "rows": 28
+    },
+    "claims_wsp.csv": {
+      "description": "Panel 5: earnings-call claims for WSP with verified quotes (quote_verified).",
+      "source": "WSP earnings call transcripts (Onesheet) + profile evidence",
+      "rows": 3,
+      "columns": [
+        "key",
+        "ticker",
+        "call",
+        "call_date",
+        "speaker",
+        "claim_type",
+        "claim_quote",
+        "target",
+        "outcome",
+        "evidence",
+        "evidence_source",
+        "verdict",
+        "check_by",
+        "quote_verified"
+      ]
+    }
+  },
+  "missing": [
+    {
+      "what": "Statements for STN.TO",
+      "how_to_fix": "python pull.py STN.TO --only quote statement_income statement_balance statement_cash"
+    },
+    {
+      "what": "Statements for TTEK",
+      "how_to_fix": "python pull.py TTEK --only quote statement_income statement_balance statement_cash"
+    },
+    {
+      "what": "Statements for KBR",
+      "how_to_fix": "python pull.py KBR --only quote statement_income statement_balance statement_cash"
+    },
+    {
+      "what": "STN.TO missing from peer_scorecard.csv",
+      "how_to_fix": "pull its statements, then rerun this script"
+    },
+    {
+      "what": "TTEK missing from peer_scorecard.csv",
+      "how_to_fix": "pull its statements, then rerun this script"
+    },
+    {
+      "what": "KBR missing from peer_scorecard.csv",
+      "how_to_fix": "pull its statements, then rerun this script"
+    },
+    {
+      "what": "Daily prices for AME",
+      "how_to_fix": "python pull.py AME --only price_history"
+    },
+    {
+      "what": "Daily prices for WCN",
+      "how_to_fix": "python pull.py WCN --only price_history"
+    },
+    {
+      "what": "Daily prices for BRO",
+      "how_to_fix": "python pull.py BRO --only price_history"
+    },
+    {
+      "what": "Daily prices for IEX",
+      "how_to_fix": "python pull.py IEX --only price_history"
+    },
+    {
+      "what": "Daily prices for ETN",
+      "how_to_fix": "python pull.py ETN --only price_history"
+    },
+    {
+      "what": "Daily prices for ROP",
+      "how_to_fix": "python pull.py ROP --only price_history"
+    },
+    {
+      "what": "Daily prices for TDY",
+      "how_to_fix": "python pull.py TDY --only price_history"
+    },
+    {
+      "what": "Daily prices for TDG",
+      "how_to_fix": "python pull.py TDG --only price_history"
+    },
+    {
+      "what": "Daily prices for ACM",
+      "how_to_fix": "python pull.py ACM --only price_history"
+    },
+    {
+      "what": "Daily prices for HEI",
+      "how_to_fix": "python pull.py HEI --only price_history"
+    },
+    {
+      "what": "Daily prices for J",
+      "how_to_fix": "python pull.py J --only price_history"
+    },
+    {
+      "what": "Daily prices for POOL",
+      "how_to_fix": "python pull.py POOL --only price_history"
+    },
+    {
+      "what": "Daily prices for WSO",
+      "how_to_fix": "python pull.py WSO --only price_history"
+    },
+    {
+      "what": "Daily prices for DHR",
+      "how_to_fix": "python pull.py DHR --only price_history"
+    }
+  ],
+  "price_coverage": [
+    {
+      "ticker": "WSP.TO",
+      "min": "2026-06-22",
+      "max": "2026-11-12",
+      "count": 100
+    }
+  ]
+}

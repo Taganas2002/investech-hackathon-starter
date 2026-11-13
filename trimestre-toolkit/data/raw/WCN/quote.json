@@ -1,0 +1,32 @@
+{
+  "success": true,
+  "data": {
+    "symbol": "WCN",
+    "name": "Waste Connections, Inc.",
+    "price": 193.92,
+    "change": 1.69,
+    "changesPercentage": 0.87916,
+    "dayLow": 191.26,
+    "dayHigh": 195.39,
+    "yearHigh": 195.39,
+    "yearLow": 146.89,
+    "marketCap": 48514129920,
+    "priceAvg50": 167.0864,
+    "priceAvg200": 164.3329,
+    "volume": 2308538,
+    "avgVolume": null,
+    "exchange": "NYSE",
+    "open": 195.39,
+    "previousClose": 192.23,
+    "eps": null,
+    "pe": null,
+    "earningsAnnouncement": null,
+    "sharesOutstanding": null,
+    "timestamp": 1794517202
+  },
+  "meta": {
+    "timestamp": "2026-11-12T22:46:28.352Z",
+    "cached": true,
+    "source": "market"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "success": true,
+  "data": {
+    "symbol": "IEX",
+    "name": "IDEX Corporation",
+    "price": 238.03,
+    "change": -1.93,
+    "changesPercentage": -0.8043,
+    "dayLow": 235.07,
+    "dayHigh": 239.81,
+    "yearHigh": 243.8,
+    "yearLow": 160.6,
+    "marketCap": 17483970222,
+    "priceAvg50": 230.5444,
+    "priceAvg200": 217.7315,
+    "volume": 500490,
+    "avgVolume": null,
+    "exchange": "NYSE",
+    "open": 238.2,
+    "previousClose": 239.96,
+    "eps": null,
+    "pe": null,
+    "earningsAnnouncement": null,
+    "sharesOutstanding": null,
+    "timestamp": 1794517202
+  },
+  "meta": {
+    "timestamp": "2026-11-12T22:46:29.145Z",
+    "cached": true,
+    "source": "market"
+  }
+}

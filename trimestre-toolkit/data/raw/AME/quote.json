@@ -1,0 +1,32 @@
+{
+  "success": true,
+  "data": {
+    "symbol": "AME",
+    "name": "AMETEK, Inc.",
+    "price": 241.04,
+    "change": 1.35,
+    "changesPercentage": 0.56323,
+    "dayLow": 236.01,
+    "dayHigh": 243.18,
+    "yearHigh": 261.16,
+    "yearLow": 188.47,
+    "marketCap": 55274808551,
+    "priceAvg50": 243.0754,
+    "priceAvg200": 234.9543,
+    "volume": 1236687,
+    "avgVolume": null,
+    "exchange": "NYSE",
+    "open": 238.01,
+    "previousClose": 239.69,
+    "eps": null,
+    "pe": null,
+    "earningsAnnouncement": null,
+    "sharesOutstanding": null,
+    "timestamp": 1794517203
+  },
+  "meta": {
+    "timestamp": "2026-11-12T22:46:27.937Z",
+    "cached": true,
+    "source": "market"
+  }
+}

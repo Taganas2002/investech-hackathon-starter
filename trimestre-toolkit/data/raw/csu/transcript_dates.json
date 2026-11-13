@@ -1,0 +1,407 @@
+{
+  "success": true,
+  "data": [
+    {
+      "symbol": "CSU",
+      "year": 2026,
+      "quarter": 3,
+      "date": "2026-11-05"
+    },
+    {
+      "symbol": "CSU",
+      "year": 2026,
+      "quarter": 2,
+      "date": "2026-08-10"
+    },
+    {
+      "symbol": "CSU",
+      "year": 2026,
+      "quarter": 1,
+      "date": "2026-05-11"
+    },
+    {
+      "symbol": "CSU",
+      "year": 2025,
+      "quarter": 4,
+      "date": "2026-03-11"
+    },
+    {
+      "symbol": "CSU",
+      "year": 2025,
+      "quarter": 3,
+      "date": "2025-11-10"
+    },
+    {
+      "symbol": "CSU",
+      "year": 2025,
+      "quarter": 2,
+      "date": "2025-08-11"
+    },
+    {
+      "symbol": "CSU",
+      "year": 2025,
+      "quarter": 1,
+      "date": "2025-05-12"
+    },
+    {
+      "symbol": "CSU",
+      "year": 2024,
+      "quarter": 4,
+      "date": "2025-03-17"
+    },
+    {
+      "symbol": "CSU",
+      "year": 2024,
+      "quarter": 3,
+      "date": "2024-11-13"
+    },
+    {
+      "symbol": "CSU",
+      "year": 2024,
+      "quarter": 2,
+      "date": "2024-08-12"
+    },
+    {
+      "symbol": "CSU",
+      "year": 2024,
+      "quarter": 1,
+      "date": "2024-05-10"
+    },
+    {
+      "symbol": "CSU",
+      "year": 2023,
+      "quarter": 4,
+      "date": "2024-03-27"
+    },
+    {
+      "symbol": "CSU",
+      "year": 2023,
+      "quarter": 3,
+      "date": "2023-11-14"
+    },
+    {
+      "symbol": "CSU",
+      "year": 2023,
+      "quarter": 2,
+      "date": "2023-08-14"
+    },
+    {
+      "symbol": "CSU",
+      "year": 2023,
+      "quarter": 1,
+      "date": "2023-05-11"
+    },
+    {
+      "symbol": "CSU",
+      "year": 2022,
+      "quarter": 4,
+      "date": "2023-03-30"
+    },
+    {
+      "symbol": "CSU",
+      "year": 2022,
+      "quarter": 3,
+      "date": "2022-11-14"
+    },
+    {
+      "symbol": "CSU",
+      "year": 2022,
+      "quarter": 2,
+      "date": "2022-08-12"
+    },
+    {
+      "symbol": "CSU",
+      "year": 2022,
+      "quarter": 1,
+      "date": "2022-05-23"
+    },
+    {
+      "symbol": "CSU",
+      "year": 2021,
+      "quarter": 4,
+      "date": "2022-04-18"
+    },
+    {
+      "symbol": "CSU",
+      "year": 2021,
+      "quarter": 3,
+      "date": "2021-11-11"
+    },
+    {
+      "symbol": "CSU",
+      "year": 2021,
+      "quarter": 2,
+      "date": "2021-08-12"
+    },
+    {
+      "symbol": "CSU",
+      "year": 2021,
+      "quarter": 1,
+      "date": "2021-05-13"
+    },
+    {
+      "symbol": "CSU",
+      "year": 2020,
+      "quarter": 4,
+      "date": "2021-03-31"
+    },
+    {
+      "symbol": "CSU",
+      "year": 2020,
+      "quarter": 3,
+      "date": "2020-11-05"
+    },
+    {
+      "symbol": "CSU",
+      "year": 2020,
+      "quarter": 2,
+      "date": "2020-08-06"
+    },
+    {
+      "symbol": "CSU",
+      "year": 2020,
+      "quarter": 1,
+      "date": "2020-05-21"
+    },
+    {
+      "symbol": "CSU",
+      "year": 2019,
+      "quarter": 4,
+      "date": "2020-03-31"
+    },
+    {
+      "symbol": "CSU",
+      "year": 2019,
+      "quarter": 3,
+      "date": "2019-11-07"
+    },
+    {
+      "symbol": "CSU",
+      "year": 2019,
+      "quarter": 2,
+      "date": "2019-08-08"
+    },
+    {
+      "symbol": "CSU",
+      "year": 2019,
+      "quarter": 1,
+      "date": "2019-05-09"
+    },
+    {
+      "symbol": "CSU",
+      "year": 2018,
+      "quarter": 4,
+      "date": "2019-02-28"
+    },
+    {
+      "symbol": "CSU",
+      "year": 2018,
+      "quarter": 3,
+      "date": "2018-11-06"
+    },
+    {
+      "symbol": "CSU",
+      "year": 2018,
+      "quarter": 2,
+      "date": "2018-07-31"
+    },
+    {
+      "symbol": "CSU",
+      "year": 2018,
+      "quarter": 1,
+      "date": "2018-05-01"
+    },
+    {
+      "symbol": "CSU",
+      "year": 2017,
+      "quarter": 4,
+      "date": "2018-02-27"
+    },
+    {
+      "symbol": "CSU",
+      "year": 2017,
+      "quarter": 3,
+      "date": "2017-11-01"
+    },
+    {
+      "symbol": "CSU",
+      "year": 2017,
+      "quarter": 2,
+      "date": "2017-08-01"
+    },
+    {
+      "symbol": "CSU",
+      "year": 2017,
+      "quarter": 1,
+      "date": "2017-05-02"
+    },
+    {
+      "symbol": "CSU",
+      "year": 2016,
+      "quarter": 4,
+      "date": "2017-02-28"
+    },
+    {
+      "symbol": "CSU",
+      "year": 2016,
+      "quarter": 3,
+      "date": "2016-11-01"
+    },
+    {
+      "symbol": "CSU",
+      "year": 2016,
+      "quarter": 2,
+      "date": "2016-08-02"
+    },
+    {
+      "symbol": "CSU",
+      "year": 2016,
+      "quarter": 1,
+      "date": "2016-05-03"
+    },
+    {
+      "symbol": "CSU",
+      "year": 2015,
+      "quarter": 4,
+      "date": "2016-02-25"
+    },
+    {
+      "symbol": "CSU",
+      "year": 2015,
+      "quarter": 3,
+      "date": "2015-11-03"
+    },
+    {
+      "symbol": "CSU",
+      "year": 2015,
+      "quarter": 2,
+      "date": "2015-08-04"
+    },
+    {
+      "symbol": "CSU",
+      "year": 2015,
+      "quarter": 1,
+      "date": "2015-05-05"
+    },
+    {
+      "symbol": "CSU",
+      "year": 2014,
+      "quarter": 4,
+      "date": "2015-02-26"
+    },
+    {
+      "symbol": "CSU",
+      "year": 2014,
+      "quarter": 3,
+      "date": "2014-11-04"
+    },
+    {
+      "symbol": "CSU",
+      "year": 2014,
+      "quarter": 2,
+      "date": "2014-08-05"
+    },
+    {
+      "symbol": "CSU",
+      "year": 2014,
+      "quarter": 1,
+      "date": "2014-05-06"
+    },
+    {
+      "symbol": "CSU",
+      "year": 2013,
+      "quarter": 4,
+      "date": "2014-02-27"
+    },
+    {
+      "symbol": "CSU",
+      "year": 2013,
+      "quarter": 3,
+      "date": "2013-11-04"
+    },
+    {
+      "symbol": "CSU",
+      "year": 2013,
+      "quarter": 2,
+      "date": "2013-08-06"
+    },
+    {
+      "symbol": "CSU",
+      "year": 2013,
+      "quarter": 1,
+      "date": "2013-05-07"
+    },
+    {
+      "symbol": "CSU",
+      "year": 2012,
+      "quarter": 4,
+      "date": "2013-03-07"
+    },
+    {
+      "symbol": "CSU",
+      "year": 2012,
+      "quarter": 3,
+      "date": "2012-11-02"
+    },
+    {
+      "symbol": "CSU",
+      "year": 2012,
+      "quarter": 2,
+      "date": "2012-08-02"
+    },
+    {
+      "symbol": "CSU",
+      "year": 2012,
+      "quarter": 1,
+      "date": "2012-05-03"
+    },
+    {
+      "symbol": "CSU",
+      "year": 2011,
+      "quarter": 4,
+      "date": "2012-03-01"
+    },
+    {
+      "symbol": "CSU",
+      "year": 2010,
+      "quarter": 1,
+      "date": "2010-05-06"
+    },
+    {
+      "symbol": "CSU",
+      "year": 2008,
+      "quarter": 4,
+      "date": "2009-03-11"
+    },
+    {
+      "symbol": "CSU",
+      "year": 2008,
+      "quarter": 3,
+      "date": "2008-11-05"
+    },
+    {
+      "symbol": "CSU",
+      "year": 2008,
+      "quarter": 2,
+      "date": "2008-08-06"
+    },
+    {
+      "symbol": "CSU",
+      "year": 2008,
+      "quarter": 1,
+      "date": "2008-05-07"
+    },
+    {
+      "symbol": "CSU",
+      "year": 2007,
+      "quarter": 4,
+      "date": "2008-03-12"
+    }
+  ],
+  "meta": {
+    "timestamp": "2026-11-12T22:17:05.919Z",
+    "cached": false,
+    "source": "market",
+    "total": 66
+  }
+}

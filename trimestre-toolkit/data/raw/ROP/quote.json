@@ -1,0 +1,32 @@
+{
+  "success": true,
+  "data": {
+    "symbol": "ROP",
+    "name": "Roper Technologies, Inc.",
+    "price": 477.87,
+    "change": 0.17,
+    "changesPercentage": 0.03558719,
+    "dayLow": 477.08,
+    "dayHigh": 485.01,
+    "yearHigh": 507.24,
+    "yearLow": 305.96,
+    "marketCap": 47326524468,
+    "priceAvg50": 402.1574,
+    "priceAvg200": 367.889,
+    "volume": 645655,
+    "avgVolume": null,
+    "exchange": "NASDAQ",
+    "open": 482.79,
+    "previousClose": 477.7,
+    "eps": null,
+    "pe": null,
+    "earningsAnnouncement": null,
+    "sharesOutstanding": null,
+    "timestamp": 1794517200
+  },
+  "meta": {
+    "timestamp": "2026-11-12T22:46:30.011Z",
+    "cached": true,
+    "source": "market"
+  }
+}

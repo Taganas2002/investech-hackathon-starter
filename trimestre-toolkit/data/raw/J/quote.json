@@ -1,0 +1,32 @@
+{
+  "success": true,
+  "data": {
+    "symbol": "J",
+    "name": "Jacobs Solutions Inc.",
+    "price": 158.69,
+    "change": 1.22,
+    "changesPercentage": 0.77475,
+    "dayLow": 156.25,
+    "dayHigh": 161.6491,
+    "yearHigh": 162,
+    "yearLow": 105.68,
+    "marketCap": 18572918910,
+    "priceAvg50": 144.6164,
+    "priceAvg200": 134.51785,
+    "volume": 578550,
+    "avgVolume": null,
+    "exchange": "NYSE",
+    "open": 159.96,
+    "previousClose": 157.47,
+    "eps": null,
+    "pe": null,
+    "earningsAnnouncement": null,
+    "sharesOutstanding": null,
+    "timestamp": 1794517202
+  },
+  "meta": {
+    "timestamp": "2026-11-12T22:46:31.965Z",
+    "cached": true,
+    "source": "market"
+  }
+}

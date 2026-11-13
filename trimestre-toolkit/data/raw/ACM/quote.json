@@ -1,0 +1,32 @@
+{
+  "success": true,
+  "data": {
+    "symbol": "ACM",
+    "name": "Aecom",
+    "price": 70.11,
+    "change": -0.14,
+    "changesPercentage": -0.19929,
+    "dayLow": 69.56,
+    "dayHigh": 73.2,
+    "yearHigh": 135.52,
+    "yearLow": 56.39,
+    "marketCap": 9022876560,
+    "priceAvg50": 62.429,
+    "priceAvg200": 74.9636,
+    "volume": 1416858,
+    "avgVolume": null,
+    "exchange": "NYSE",
+    "open": 71.86,
+    "previousClose": 70.25,
+    "eps": null,
+    "pe": null,
+    "earningsAnnouncement": null,
+    "sharesOutstanding": null,
+    "timestamp": 1794517202
+  },
+  "meta": {
+    "timestamp": "2026-11-12T22:46:31.152Z",
+    "cached": true,
+    "source": "market"
+  }
+}

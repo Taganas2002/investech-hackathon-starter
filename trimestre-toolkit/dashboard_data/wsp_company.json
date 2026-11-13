@@ -1,0 +1,121 @@
+{
+  "identity": {
+    "key": "wsp",
+    "name": "WSP Global Inc.",
+    "cik": null,
+    "sedarProfile": "000035376",
+    "listings": [
+      {
+        "symbol": "WSP",
+        "exchange": "TSX",
+        "market": "CA"
+      }
+    ],
+    "fiscalYearEnd": "12-31",
+    "reportingCurrency": "CAD"
+  },
+  "description": "WSP is a global professional services firm providing engineering, design, environmental and advisory services for transport, buildings, energy and natural-resource projects. It reports four geographic segments and tracks net revenues across four sectors.",
+  "segments": [
+    {
+      "name": "APAC",
+      "description": "Australia, New Zealand and Asia."
+    },
+    {
+      "name": "Americas",
+      "description": "The United States and Latin America, WSP's largest segment."
+    },
+    {
+      "name": "Canada",
+      "description": "WSP's home market, serving public and private clients across Canada."
+    },
+    {
+      "name": "EMEIA",
+      "description": "Europe, the Middle East, India and Africa, including the UK and the Nordics."
+    }
+  ],
+  "business_lines": [
+    {
+      "name": "Earth & Environment",
+      "description": "Earth-science and environmental services, including permitting, compliance, remediation, geotechnical and mining engineering, water resources and impact assessments."
+    },
+    {
+      "name": "Power & Energy",
+      "description": "Engineering for energy projects, including renewables, nuclear, natural gas, power plants, transmission, substations, distribution and storage."
+    },
+    {
+      "name": "Private sector",
+      "description": "Net revenues from private sector clients."
+    },
+    {
+      "name": "Property & Buildings",
+      "description": "Technical and advisory services for commercial buildings and social and critical infrastructure, from business case and design to asset management and refurbishment."
+    },
+    {
+      "name": "Public sector",
+      "description": "Net revenues from government and other public sector clients."
+    },
+    {
+      "name": "Transport & Infrastructure",
+      "description": "Advisory, planning, design and project management for rail, transit, aviation, highways, bridges, tunnels, water, maritime and urban infrastructure."
+    }
+  ],
+  "subsidiaries": [
+    {
+      "name": "1A Ingenieros",
+      "description": "Spanish consulting firm of about 250 employees, mainly in Power & Energy, acquired in May 2024."
+    },
+    {
+      "name": "AKF Group LLC",
+      "description": null
+    },
+    {
+      "name": "Calibre Professional Services One Pty Ltd",
+      "description": null
+    },
+    {
+      "name": "Communica Public Affairs",
+      "description": "Public affairs consultancy acquired in March 2024."
+    },
+    {
+      "name": "Lexica",
+      "description": "Health and life sciences consultancy acquired in June 2025."
+    },
+    {
+      "name": "Louis Berger",
+      "description": "Engineering firm acquired in December 2018."
+    },
+    {
+      "name": "POWER Engineers",
+      "description": "Power and energy engineering firm acquired in 2024."
+    },
+    {
+      "name": "Proxion",
+      "description": "Engineering firms (Proxion Plan Oy and Proxion Pro Oy) acquired in March 2024."
+    },
+    {
+      "name": "Ricardo",
+      "description": "Engineering and environmental consultancy acquired in October 2025."
+    },
+    {
+      "name": "TRC",
+      "description": "Engineering and consulting firm acquired in February 2026, strong in Power & Energy; about 9% of revenues in the first nine months of 2026."
+    }
+  ],
+  "quote": {
+    "symbol": "WSP.TO",
+    "name": "WSP Global Inc.",
+    "price": 184.33,
+    "marketCap": 24850817857,
+    "yearHigh": 275.24,
+    "yearLow": 156.64,
+    "priceAvg50": 178.9936,
+    "priceAvg200": 199.65405,
+    "exchange": "TSX",
+    "timestamp": 1794517200
+  },
+  "quote_currency": "CAD (TSX listing)",
+  "source": {
+    "profile": "Onesheet /company-profiles/wsp",
+    "quote": "Onesheet /stocks/quotes/WSP.TO"
+  }
+}

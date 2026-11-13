@@ -1,0 +1,32 @@
+{
+  "success": true,
+  "data": {
+    "symbol": "ARE.TO",
+    "name": "Aecon Group Inc.",
+    "price": 55.33,
+    "change": -0.89,
+    "changesPercentage": -1.58306,
+    "dayLow": 54.68,
+    "dayHigh": 56.66,
+    "yearHigh": 59.96,
+    "yearLow": 25.05,
+    "marketCap": 3794342282,
+    "priceAvg50": 50.8748,
+    "priceAvg200": 46.2008,
+    "volume": 223701,
+    "avgVolume": null,
+    "exchange": "TSX",
+    "open": 55.6,
+    "previousClose": 56.22,
+    "eps": null,
+    "pe": null,
+    "earningsAnnouncement": null,
+    "sharesOutstanding": null,
+    "timestamp": 1794517200
+  },
+  "meta": {
+    "timestamp": "2026-11-12T22:18:57.970Z",
+    "cached": false,
+    "source": "market"
+  }
+}

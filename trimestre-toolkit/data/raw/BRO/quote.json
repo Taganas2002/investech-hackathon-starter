@@ -1,0 +1,32 @@
+{
+  "success": true,
+  "data": {
+    "symbol": "BRO",
+    "name": "Brown & Brown, Inc.",
+    "price": 70.55,
+    "change": -0.84,
+    "changesPercentage": -1.17664,
+    "dayLow": 70.53,
+    "dayHigh": 73.369,
+    "yearHigh": 82.58,
+    "yearLow": 53.81,
+    "marketCap": 23400870600,
+    "priceAvg50": 66.9132,
+    "priceAvg200": 66.36805,
+    "volume": 1445488,
+    "avgVolume": null,
+    "exchange": "NYSE",
+    "open": 72.63,
+    "previousClose": 71.39,
+    "eps": null,
+    "pe": null,
+    "earningsAnnouncement": null,
+    "sharesOutstanding": null,
+    "timestamp": 1794517202
+  },
+  "meta": {
+    "timestamp": "2026-11-12T22:46:28.763Z",
+    "cached": true,
+    "source": "market"
+  }
+}

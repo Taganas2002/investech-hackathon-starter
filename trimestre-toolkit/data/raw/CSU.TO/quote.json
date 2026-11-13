@@ -1,0 +1,32 @@
+{
+  "success": true,
+  "data": {
+    "symbol": "CSU.TO",
+    "name": "Constellation Software Inc.",
+    "price": 3496.88,
+    "change": 42.67002,
+    "changesPercentage": 1.2353,
+    "dayLow": 3411.875,
+    "dayHigh": 3531.81,
+    "yearHigh": 3532.73,
+    "yearLow": 2196,
+    "marketCap": 74104237426,
+    "priceAvg50": 3094.6465,
+    "priceAvg200": 2797.9011,
+    "volume": 39399,
+    "avgVolume": null,
+    "exchange": "TSX",
+    "open": 3421.33008,
+    "previousClose": 3454.20998,
+    "eps": null,
+    "pe": null,
+    "earningsAnnouncement": null,
+    "sharesOutstanding": null,
+    "timestamp": 1794517200
+  },
+  "meta": {
+    "timestamp": "2026-11-12T22:18:52.490Z",
+    "cached": false,
+    "source": "market"
+  }
+}

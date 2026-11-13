@@ -1,0 +1,32 @@
+{
+  "success": true,
+  "data": {
+    "symbol": "ARE",
+    "name": "Alexandria Real Estate Equities, Inc.",
+    "price": 44.3,
+    "change": -0.78,
+    "changesPercentage": -1.73026,
+    "dayLow": 44.18,
+    "dayHigh": 45.32,
+    "yearHigh": 59.76,
+    "yearLow": 38.34,
+    "marketCap": 7715332300,
+    "priceAvg50": 46.8246,
+    "priceAvg200": 49.0089,
+    "volume": 1360691,
+    "avgVolume": null,
+    "exchange": "NYSE",
+    "open": 44.85,
+    "previousClose": 45.08,
+    "eps": null,
+    "pe": null,
+    "earningsAnnouncement": null,
+    "sharesOutstanding": null,
+    "timestamp": 1794517202
+  },
+  "meta": {
+    "timestamp": "2026-11-12T22:17:11.428Z",
+    "cached": false,
+    "source": "market"
+  }
+}
