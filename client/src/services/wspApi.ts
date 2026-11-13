@@ -1,6 +1,10 @@
 import axios from "axios"
 
-const http = axios.create({ timeout: 120000 })
+/** Optional production API host (e.g. Render). Leave empty in local Vite so /api is proxied. */
+const http = axios.create({
+  baseURL: import.meta.env.VITE_API_BASE_URL?.trim() || undefined,
+  timeout: 120000,
+})
 
 function offlineQuery(offline: boolean) {
   return offline ? "?offline=1" : ""

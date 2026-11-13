@@ -15,27 +15,57 @@ export function DecisionPage({ offline, onOpen }: DecisionPageProps) {
 
   const pillars = scoreVerdict(data)
 
+  const verdictClass = pillars.final.toLowerCase().replaceAll(" ", "-")
+
   return (
     <section className="panel verdict-panel">
-      <p className="eyebrow">Decision</p>
-      <h2>
-        Verdict: <span className={`verdict-${pillars.final.toLowerCase().replaceAll(" ", "-")}`}>{pillars.final}</span>
-      </h2>
-      <p className="muted">Based on peer quality, value per share, deal execution and index fit.</p>
-      <div className="pillar-grid">
-        {pillars.pillars.map((pillar) => (
-          <button
-            key={pillar.name}
-            type="button"
-            className="pillar-card clickable"
-            onClick={() => onOpen(pillar.route)}
-          >
-            <p className="eyebrow">{pillar.name}</p>
-            <strong className={`pillar-${pillar.status.toLowerCase().replaceAll(" ", "-")}`}>{pillar.status}</strong>
-            <p>{pillar.rule}</p>
-            <p className="muted">{pillar.detail}</p>
-          </button>
-        ))}
+      <div className="verdict-head">
+        <div>
+          <p className="eyebrow">Decision</p>
+          <h2>
+            Verdict: <span className={`verdict-${verdictClass}`}>{pillars.final}</span>
+          </h2>
+          <p className="muted verdict-lede">
+            Based on peer quality, value per share, deal execution and index fit.
+          </p>
+        </div>
+        <span className={`verdict-badge verdict-${verdictClass}`}>{pillars.final}</span>
+      </div>
+      <div className="decision-body">
+        <div className="pillar-grid">
+          {pillars.pillars.map((pillar) => {
+            const statusClass = pillar.status.toLowerCase().replaceAll(" ", "-")
+            return (
+              <button
+                key={pillar.name}
+                type="button"
+                className="pillar-card clickable"
+                onClick={() => onOpen(pillar.route)}
+              >
+                <div className="pillar-top">
+                  <p className="eyebrow">{pillar.name}</p>
+                  <span className={`status-pill pillar-${statusClass}`}>{pillar.status}</span>
+                </div>
+                <p className="pillar-rule">{pillar.rule}</p>
+                <p className="pillar-detail muted">{pillar.detail}</p>
+                <span className="pillar-open">Open →</span>
+              </button>
+            )
+          })}
+        </div>
+        <aside className="decision-aside">
+          <p className="eyebrow">At a glance</p>
+          <ul className="decision-aside-list">
+            {pillars.pillars.map((pillar) => (
+              <li key={`${pillar.name}-aside`}>
+                <strong className={`pillar-${pillar.status.toLowerCase().replaceAll(" ", "-")}`}>{pillar.status}</strong>
+                <span>{pillar.name}</span>
+                <p className="muted">{pillar.detail}</p>
+              </li>
+            ))}
+          </ul>
+          <p className="verdict-hint muted">Open any pillar for charts and source detail.</p>
+        </aside>
       </div>
     </section>
   )
