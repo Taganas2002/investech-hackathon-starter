@@ -9,3 +9,7 @@ server/.cache
 .vercel
 *.pem
 *.key
+*.xlsx
+*.xls
+*.xlsm
+trimestre-toolkit/output/*.xlsx
