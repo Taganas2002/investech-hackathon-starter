@@ -198,10 +198,6 @@
         "market_cap"
       ]
     },
-    "dealroom_wsp.csv": {
-      "description": "Copied from data/external (see its source and quality_flag columns)",
-      "rows": 29
-    },
     "peer_headcount.csv": {
       "description": "Copied from data/external (see its source and quality_flag columns)",
       "rows": 6

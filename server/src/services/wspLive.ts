@@ -1,4 +1,4 @@
-import { readToolkitCsv, readToolkitJson, toolkitReady } from "./toolkit.js"
+import { readToolkitCsv, readToolkitCsvOptional, readToolkitJson, toolkitReady } from "./toolkit.js"
 import { mapPool, onesheetGet } from "./onesheetLive.js"
 
 const PEERS = [
@@ -138,7 +138,7 @@ export async function getGlanceLive() {
   assertQuoteName(quote, "WSP")
   const flat = flattenMetrics(profile)
   const annual = joinStatements("WSP.TO", "WSP Global", income, balance, cash)
-  const dealroom = toolkitReady() ? readToolkitCsv("dealroom_wsp.csv") : []
+  const dealroom = toolkitReady() ? readToolkitCsvOptional("dealroom_wsp.csv") : []
   return {
     mode: "live" as const,
     identity: profile.profile?.identity,
@@ -438,7 +438,7 @@ export function getOfflineDashboard() {
     events: readToolkitCsv("wsp_events.csv"),
     metrics: readToolkitCsv("wsp_metrics.csv"),
     marketCap: readToolkitCsv("wsp_marketcap_daily.csv"),
-    dealroom: readToolkitCsv("dealroom_wsp.csv"),
+    dealroom: readToolkitCsvOptional("dealroom_wsp.csv"),
   }
 }
 

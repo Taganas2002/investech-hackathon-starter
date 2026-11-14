@@ -38,6 +38,13 @@ export function readToolkitCsv(name: string): Record<string, string>[] {
   return parseCsv(readToolkitText(name))
 }
 
+/** Optional curated files (e.g. Dealroom exports removed from the public repo). */
+export function readToolkitCsvOptional(name: string): Record<string, string>[] {
+  const path = join(DATA_DIR, name)
+  if (!existsSync(path)) return []
+  return parseCsv(readFileSync(path, "utf8"))
+}
+
 export function readToolkitText(name: string): string {
   const path = join(DATA_DIR, name)
   if (!existsSync(path)) throw new Error(`Toolkit file missing: ${name}`)

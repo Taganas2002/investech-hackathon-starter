@@ -158,11 +158,11 @@ vercel.json             Multi-service Vercel config
 
 ## Security notes (public repo)
 
-| Safe to publish | Keep private |
+| Safe to publish | Keep private / removed |
 | --- | --- |
 | Source code & screenshots | `server/.env` (gitignored) |
 | Empty `.env.example` files | Real Onesheet API keys |
-| Offline `dashboard_data` CSVs/JSON | Excel outputs (ignored / removed) |
+| Offline `dashboard_data` (no Dealroom) | Excel outputs + **raw Dealroom exports** (removed) |
 
 API keys belong only in local `.env` or Vercel env settings — never in client code or docs.
 
