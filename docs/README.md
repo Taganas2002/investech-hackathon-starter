@@ -3,6 +3,8 @@
 Visual tour of **WSP Index Admission Analysis**.  
 These images show the UI only — **no API keys** are included.
 
+**Note:** Live Onesheet API keys were stopped for the hackathon demo. The app defaults to **Offline snapshot** (saved `dashboard_data`). Screenshots below were taken in that mode.
+
 Back to the main guide: [README.md](../README.md)
 
 ---

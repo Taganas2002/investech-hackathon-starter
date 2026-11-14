@@ -16,7 +16,8 @@ interface WspShellProps {
 
 export default function WspShell({ onBack }: WspShellProps) {
   const [route, setRoute] = useState<WspRoute>(routeFromHash)
-  const [offline, setOffline] = useState(false)
+  /** Default to offline — live Onesheet keys were revoked for the hackathon. */
+  const [offline, setOffline] = useState(true)
   const [offlineAvailable, setOfflineAvailable] = useState(false)
 
   useEffect(() => {
@@ -24,7 +25,13 @@ export default function WspShell({ onBack }: WspShellProps) {
     window.addEventListener("hashchange", onHash)
     if (!window.location.hash) setRouteHash("decision")
     void getWspReady()
-      .then((ready) => setOfflineAvailable(ready.offlineAvailable))
+      .then((ready) => {
+        setOfflineAvailable(ready.offlineAvailable)
+        if (ready.offlineAvailable) {
+          setOffline(true)
+          clearWspCache()
+        }
+      })
       .catch(() => setOfflineAvailable(false))
     return () => window.removeEventListener("hashchange", onHash)
   }, [])
@@ -66,6 +73,13 @@ export default function WspShell({ onBack }: WspShellProps) {
           </button>
         </div>
       </header>
+
+      {offline ? (
+        <p className="banner banner-info wsp-offline-note" role="status">
+          Showing the saved offline snapshot. Live Onesheet API access was stopped for this demo — leave Offline
+          snapshot on to explore all WSP panels.
+        </p>
+      ) : null}
 
       <nav className="wsp-nav" aria-label="WSP sections">
         {WSP_NAV.map((item) => (

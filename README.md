@@ -10,6 +10,14 @@
 | **Live demo** | https://investech-hackathon-starter.vercel.app |
 | **Repo** | https://github.com/Taganas2002/investech-hackathon-starter |
 
+### Important: offline snapshot mode
+
+The organizer **stopped / revoked live Onesheet API keys** for this demo. The app therefore **defaults to Offline snapshot** and loads the saved toolkit data under `trimestre-toolkit/dashboard_data`.
+
+- Leave **Offline snapshot** checked to browse Decision, Glance, Peers, Deals, etc.
+- Competitive Edge still has **Demo Data** (no API key required).
+- Live Onesheet calls will return **401** until a new valid key is provided.
+
 ---
 
 ## What you get
@@ -72,7 +80,7 @@ npm run dev
 
 Open http://localhost:5173
 
-> Tip: if the Onesheet key is missing or revoked, turn on **Offline snapshot** in the WSP header. Competitive Edge also has **Demo Data** (no API required).
+> Tip: **Offline snapshot is on by default** because live Onesheet keys were stopped. Competitive Edge **Demo Data** also works with no API.
 
 ---
 
@@ -109,8 +117,8 @@ ONESHEET_API_KEY=your_onesheet_key
 
 | Mode | Needs API key? | Notes |
 | --- | --- | --- |
-| WSP **live** | Yes | `/api/wsp/*` → Onesheet via Express |
-| WSP **Offline snapshot** | No | Reads `trimestre-toolkit/dashboard_data` |
+| WSP **Offline snapshot** (default) | No | Reads `trimestre-toolkit/dashboard_data` — use this while keys are stopped |
+| WSP **live** | Yes | `/api/wsp/*` → Onesheet (returns 401 if key revoked) |
 | Competitive Edge **Demo Data** | No | Fictional companies in the client |
 | Competitive Edge **Load API** | Yes | Proxied company feed |
 
