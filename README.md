@@ -1,35 +1,68 @@
-# Investech Hackathon — Competitive Edge + WSP Index Admission
+# Investech Hackathon Starter
 
-Hackathon app for Investech / Onesheet.
+**Competitive Edge** + **WSP Index Admission Analysis** — a Onesheet-backed hackathon app for Investech.
 
-1. **WSP Index Admission Analysis** — evidence panels for whether WSP Global fits index admission (decision, glance, peers, value per share, deals, index fit).
-2. **Competitive Edge** — sector peer ranking from demo data, CSV import, or the Onesheet-backed API.
+> **Pitch:** Should WSP Global be admitted to the index? The app builds an evidence-based verdict (Admit / Watch / Reject) from peers, value-per-share, deal execution, and index fit — with an offline snapshot when the live API is unavailable.
 
-Live demo (when deployed): use the Vercel URL for this repo. Local: `http://localhost:5173`
+| | |
+| --- | --- |
+| **Local app** | http://localhost:5173 |
+| **Live demo** | https://investech-hackathon-starter.vercel.app |
+| **Repo** | https://github.com/Taganas2002/investech-hackathon-starter |
+
+---
+
+## What you get
+
+1. **WSP Index Admission** (default view)  
+   Decision · Glance · Acquisitions · Peers · Value per share · Deal execution · Index fit  
+2. **Competitive Edge**  
+   Sector peer ranking from demo data, CSV import, or the Onesheet API
+
+---
 
 ## Screenshots
 
-### Decision
+<p align="center">
+  <img src="docs/screenshots/01-decision.png" alt="Decision verdict" width="900" />
+</p>
 
-![Decision verdict](docs/screenshots/01-decision.png)
-
-### WSP at a glance
+<details>
+<summary><strong>More screenshots</strong> (Glance, Peers, Value per share, Deals)</summary>
 
 ![WSP at a glance](docs/screenshots/02-glance-top.png)
 
 ![Glance charts](docs/screenshots/03-glance-charts.png)
 
-### Value per share
+![Peer comparison](docs/screenshots/06-peers.png)
 
 ![Value per share](docs/screenshots/04-per-share.png)
 
-![Per-share charts](docs/screenshots/05-per-share-detail.png)
+![Deal execution](docs/screenshots/07-deals.png)
 
-More images: [`docs/README.md`](docs/README.md)
+Full gallery: [`docs/README.md`](docs/README.md)
+
+</details>
+
+---
 
 ## Quick start
 
-### Frontend
+You need **two terminals**.
+
+### 1) API server
+
+```bash
+cd server
+npm install
+copy .env.example .env
+# edit .env — paste your Onesheet key (see below)
+npm run dev
+```
+
+Runs on http://localhost:3001
+
+### 2) Frontend
 
 ```bash
 cd client
@@ -39,79 +72,106 @@ npm run dev
 
 Open http://localhost:5173
 
-### Backend (needed for live Onesheet + offline WSP snapshot)
+> Tip: if the Onesheet key is missing or revoked, turn on **Offline snapshot** in the WSP header. Competitive Edge also has **Demo Data** (no API required).
 
-```bash
-cd server
-npm install
-copy .env.example .env
-npm run dev
-```
-
-Proxy: http://localhost:3001  
-In dev, Vite forwards `/api` to the proxy.
+---
 
 ## Environment variables
 
-**Never commit real keys.** Put secrets only in `server/.env` (gitignored) or Vercel env settings.
+**Never commit real keys.** Use `server/.env` locally and Vercel → Settings → Environment Variables in production.
 
-### `server/.env`
+### Server — `server/.env`
 
-| Variable | Purpose |
+```env
+PORT=3001
+ORGANIZER_API_URL=https://api.onesheet.pro/v1
+ORGANIZER_API_KEY=your_onesheet_key
+ONESHEET_API_KEY=your_onesheet_key
+```
+
+| Variable | Required | Notes |
+| --- | --- | --- |
+| `ORGANIZER_API_URL` | Yes (live) | Onesheet base URL |
+| `ORGANIZER_API_KEY` | Yes (live) | Server-only secret |
+| `ONESHEET_API_KEY` | Yes (live) | Same key; used by WSP routes |
+| `PORT` | No | Defaults to `3001` |
+
+### Client — optional `client/.env`
+
+| Variable | Notes |
 | --- | --- |
-| `ORGANIZER_API_URL` | `https://api.onesheet.pro/v1` |
-| `ORGANIZER_API_KEY` | Onesheet key (server only) |
-| `ONESHEET_API_KEY` | Same key (used by WSP live routes) |
-| `PORT` | Default `3001` |
+| `VITE_API_BASE_URL` | Leave **empty** locally and on Vercel Services |
+| `VITE_API_KEY` | Do **not** put Onesheet secrets here (visible in the browser) |
 
-### `client/.env` (optional)
+---
 
-| Variable | Purpose |
-| --- | --- |
-| `VITE_API_BASE_URL` | Leave empty locally and on Vercel Services (same-origin `/api`) |
-| `VITE_API_KEY` | Do **not** put Onesheet secrets here — visible in the browser bundle |
+## How the modes work
 
-## Modes
+| Mode | Needs API key? | Notes |
+| --- | --- | --- |
+| WSP **live** | Yes | `/api/wsp/*` → Onesheet via Express |
+| WSP **Offline snapshot** | No | Reads `trimestre-toolkit/dashboard_data` |
+| Competitive Edge **Demo Data** | No | Fictional companies in the client |
+| Competitive Edge **Load API** | Yes | Proxied company feed |
 
-| Mode | What it does |
-| --- | --- |
-| WSP live | Calls Onesheet via Express (`/api/wsp/*`) |
-| WSP **Offline snapshot** | Serves `trimestre-toolkit/dashboard_data` (works if the API key is down) |
-| Competitive Edge **Demo Data** | Fictional companies in the client — no API required |
-| Competitive Edge **Load API** | Proxied Onesheet company feed |
+---
 
-## Deploy (Vercel Services)
+## Deploy on Vercel
 
-Root `vercel.json` defines two services:
+This repo uses **Vercel Services** (`vercel.json` at the root):
 
-- `client` (Vite) at `/`
-- `server` (Express) at `/api/*`
+| Service | Framework | Public path |
+| --- | --- | --- |
+| `client` | Vite | `/` |
+| `server` | Express | `/api/*` |
 
-Set `ORGANIZER_API_URL`, `ORGANIZER_API_KEY`, and `ONESHEET_API_KEY` in Vercel, then deploy. Leave `VITE_API_BASE_URL` empty.
+1. Import the GitHub repo in Vercel (Root Directory `./`, Services preset).
+2. Add env vars: `ORGANIZER_API_URL`, `ORGANIZER_API_KEY`, `ONESHEET_API_KEY`.
+3. Deploy. Leave `VITE_API_BASE_URL` empty.
+4. After changing env vars, **Redeploy**.
 
-## What’s safe to publish
+Check health: `https://<your-app>.vercel.app/api/health`  
+You want `"apiKeyConfigured": true`.
 
-- App source and screenshots — OK  
-- Empty `.env.example` files — OK  
-- `trimestre-toolkit/dashboard_data` — public-company metrics for the offline demo  
-- **Not in git:** `server/.env`, Excel workbooks under `trimestre-toolkit/output/`  
-
-API keys must stay in Vercel / local `.env` only.
+---
 
 ## Project layout
 
 ```text
-client/                 React + Vite UI
-server/                 Express Onesheet proxy + WSP routes
+client/                 React + Vite UI (WSP pages + Competitive Edge)
+server/                 Express proxy + /api/wsp routes
 trimestre-toolkit/      Offline dashboard_data (+ research scripts)
-docs/screenshots/       Product screenshots
+docs/screenshots/       Product screenshots for this README
 sample-data/            CSV samples for Competitive Edge import
+vercel.json             Multi-service Vercel config
 ```
+
+---
+
+## Security notes (public repo)
+
+| Safe to publish | Keep private |
+| --- | --- |
+| Source code & screenshots | `server/.env` (gitignored) |
+| Empty `.env.example` files | Real Onesheet API keys |
+| Offline `dashboard_data` CSVs/JSON | Excel outputs (ignored / removed) |
+
+API keys belong only in local `.env` or Vercel env settings — never in client code or docs.
+
+---
 
 ## Scripts
 
 ```bash
-cd client && npm run dev
-cd client && npm run build
-cd server && npm run dev
+cd client && npm run dev      # UI
+cd client && npm run build    # production build
+cd server && npm run dev      # API
 ```
+
+---
+
+## Team notes
+
+- WSP navigation uses hash routes (`#/decision`, `#/peers`, …).
+- Offline snapshot is the reliable hackathon fallback when Onesheet keys rotate or rate-limit.
+- Competitive Edge field mapping lives in `client/src/dataAdapter.ts`.
